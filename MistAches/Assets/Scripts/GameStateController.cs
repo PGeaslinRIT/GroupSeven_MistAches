@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityStandardAssets._2D;
 
 public class GameStateController : MonoBehaviour {
 
@@ -60,6 +61,9 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.Tab)) {
 				on = !on;
 				panel.SetActive (on);
+				player.GetComponent<Platformer2DUserControl> ().enabled = !on;
+				player.GetComponent<Animator> ().enabled = !on;
+				player.GetComponent<Rigidbody2D> ().simulated = !on;
 			}
 			break;
 		}
