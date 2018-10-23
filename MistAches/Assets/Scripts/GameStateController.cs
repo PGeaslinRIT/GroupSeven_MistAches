@@ -2,21 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameStateController : MonoBehaviour {
 
 	public GameObject player;
-	public GameObject button;
+	public GameObject panel;
+	public Button btnPlay;
+	public Button btnQuit;
+	public Button btnRestart;
 	public int state;
+	private bool on;
 
 	// Use this for initialization
 	void Start () {
-		if (gameObject.scene.name == "mainmenu")
+		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
-		else if (gameObject.scene.name == "gameover")
+			btnPlay.onClick.AddListener (Play);
+			btnQuit.onClick.AddListener (Quit);
+		}
+		else if (gameObject.scene.name == "gameover") {
 			state = 2;
-		else if (gameObject.scene.name == "sandbox")
+			btnRestart.onClick.AddListener (Restart);
+			btnQuit.onClick.AddListener (Quit);
+		}
+		else if (gameObject.scene.name == "sandbox") {
 			state = 10;
+			on = false;
+			player.transform.position = new Vector3 (-4, -1, 0);
+			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
+		}
 	}
 	
 	// Update is called once per frame
@@ -40,8 +55,27 @@ public class GameStateController : MonoBehaviour {
 			}
 			if (player.transform.position.y <= -10) {
 				state = 2;
+				SceneManager.LoadScene ("gameover");
+			}
+			if (Input.GetKeyDown (KeyCode.Tab)) {
+				on = !on;
+				panel.SetActive (on);
 			}
 			break;
 		}
+	}
+
+	void Play () {
+		state = 10;
+		SceneManager.LoadScene ("sandbox");
+	}
+
+	void Quit () {
+		Application.Quit ();
+	}
+
+	void Restart () {
+		state = 1;
+		SceneManager.LoadScene ("mainmenu");
 	}
 }

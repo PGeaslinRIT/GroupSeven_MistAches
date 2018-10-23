@@ -12,14 +12,8 @@ public class BoneMenu : MonoBehaviour {
 	public int maxBrokenBones = 3;
 	public int armLegCount = 2;
 
-	public GameObject panel;
-	private bool on;
-
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
-		on = false;
-=======
 		myWeatherController = gameObject.GetComponent<WeatherController> ();
 
 		brokenBones.Add ("skull", 0);
@@ -28,18 +22,10 @@ public class BoneMenu : MonoBehaviour {
 		brokenBones.Add ("ribs", 0);
 		brokenBones.Add ("arms", 0);
 		brokenBones.Add ("legs", 0);
-		
->>>>>>> 40628403e383255fce6e1489e763d38ec3a34ebc
 	}
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
-		if (Input.GetKeyDown (KeyCode.Tab)) {
-			on = !on;
-			panel.SetActive (on);
-		}
-=======
 		if (Input.GetKeyUp(KeyCode.Alpha1)) {
 			BreakBone ("ribs", true, Direction.up);
 			Debug.Log ("Wind Up");
@@ -53,8 +39,6 @@ public class BoneMenu : MonoBehaviour {
 			BreakBone ("ribs", true, Direction.left);
 			Debug.Log ("Wind Left");
 		}
-		
->>>>>>> 40628403e383255fce6e1489e763d38ec3a34ebc
 	}
 
 	//Method to break a specific bone
