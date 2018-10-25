@@ -18,7 +18,7 @@ public class WeatherController : MonoBehaviour {
 	public int precipitation = 0;
 
 	//wind variables
-	public float windMod = 0.01f;
+	public float windMod = 0.1f;
 	public int windMaxDuration = 250;
 	public List<WindObj> windObjList;
 	public Vector3 totalWindForce = Vector3.zero;
@@ -34,7 +34,8 @@ public class WeatherController : MonoBehaviour {
 		totalWindForce = Vector3.zero;
 
 		//maintain wind durations for each wind force
-		for (int i = 0; i < windObjList.Count; i++) {
+		//for (int i = 0; i < windObjList.Count; i++) {
+		for (int i = windObjList.Count - 1; i == 0; i--) {
 			//update wind object
 			windObjList[i].ManuallyUpdate();
 			//remove wind vector if wind speed drops
