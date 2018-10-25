@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum Bones{
+	skull,
+	neck,
+	back,
+	ribs,
+	arms,
+	legs
+};
+
 public class BoneMenu : MonoBehaviour {
 	//weather controller reference
 	WeatherController myWeatherController;
 
 	//broken bone trackers
-	public Dictionary<string, int> brokenBones = new Dictionary<string, int>();
+	public int[] brokenBones;
 
 	public int maxBrokenBones = 3;
 	public int armLegCount = 2;
@@ -16,65 +25,66 @@ public class BoneMenu : MonoBehaviour {
 	void Start () {
 		myWeatherController = gameObject.GetComponent<WeatherController> ();
 
-		brokenBones.Add ("skull", 0);
-		brokenBones.Add ("neck", 0);
-		brokenBones.Add ("back", 0);
-		brokenBones.Add ("ribs", 0);
-		brokenBones.Add ("arms", 0);
-		brokenBones.Add ("legs", 0);
+		brokenBones = new int[6];
+
+		for (int i = 0; i < 6; i++) {
+			brokenBones [i] = 0;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyUp(KeyCode.Alpha1)) {
-			BreakBone ("ribs", true, Direction.up);
-			Debug.Log ("Wind Up");
-		} else if (Input.GetKeyUp(KeyCode.Alpha2)) {
-			BreakBone ("ribs", true, Direction.right);
-			Debug.Log ("Wind Right");
-		} else if (Input.GetKeyUp(KeyCode.Alpha3)) {
-			BreakBone ("ribs", true, Direction.down);
-			Debug.Log ("Wind Down");
-		} else if (Input.GetKeyUp(KeyCode.Alpha4)) {
-			BreakBone ("ribs", true, Direction.left);
-			Debug.Log ("Wind Left");
+			BreakBone (Bones.ribs, Direction.up);
+		}
+
+		if (Input.GetKeyUp(KeyCode.Alpha2)) {
+			BreakBone (Bones.ribs, Direction.right);
+		} 
+
+		if (Input.GetKeyUp(KeyCode.Alpha3)) {
+			BreakBone (Bones.ribs, Direction.down);
+		}
+
+		if (Input.GetKeyUp(KeyCode.Alpha4)) {
+			BreakBone (Bones.ribs, Direction.left);
 		}
 	}
 
 	//Method to break a specific bone
-	bool BreakBone (string bone, bool increase = true, Direction dir = Direction.none) {
+	bool BreakBone (Bones bone, Direction dir = Direction.none, bool increase = true) {
 		int breakLimit = maxBrokenBones;
 
 		//arms and legs have a higher limit than other bones
-		if (bone == "arms" || bone == "legs") {
+		if (bone == Bones.arms || bone == Bones.legs) {
 			breakLimit *= armLegCount;
 		}
 
 		//check if bone has reached break limit
-		if (brokenBones[bone] >= breakLimit) {
+		if (brokenBones[(int)bone] >= breakLimit) {
 			return false;
 		} else {
-			brokenBones[bone]++;
+			brokenBones[(int)bone]++;
 		}
 
 		switch (bone) {
-		case "arms":
+		case Bones.arms:
 			myWeatherController.ChangePrecipitation (increase);			
 			break;
-		case "legs":
+		case Bones.legs:
 			myWeatherController.ChangeTemperature (increase);
 			break;
-		case "skull":
+		case Bones.skull:
 
 			break;
-		case "neck":
+		case Bones.neck:
 
 			break;
-		case "back":
+		case Bones.back:
 
 			break;
-		case "ribs":
-			myWeatherController.ChangeWind (increase, dir);
+		case Bones.ribs:
+			myWeatherController.ChangeWind (dir);
 			break;
 		}
 

@@ -14,39 +14,38 @@ public class WeatherController : MonoBehaviour {
 	//player weather controller
 	public GameObject playerObj;
 
-
 	public int temperature = 0;
 	public int precipitation = 0;
 
 	//wind variables
-	public int windSpeed = 0;
-	private bool windIncrease = true;
-	public Direction windDir = Direction.none;
-	public Vector3 windForce = Vector2.zero;
-	public int windMax = 0;
+	public float windMod = 0.01f;
+	public int windMaxDuration = 250;
+	public List<WindObj> windObjList;
+	public Vector3 totalWindForce = Vector3.zero;
 
 	// Use this for initialization
 	void Start () {
-		
+		windObjList = new List<WindObj> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//decrease how long wind lasts
-		if (windMax > 0) {
-			windMax--;
+		//reset wind force
+		totalWindForce = Vector3.zero;
 
-			if (windMax == 0 && windSpeed > 0) {
-				windSpeed--;
+		//maintain wind durations for each wind force
+		for (int i = 0; i < windObjList.Count; i++) {
+			//update wind object
+			windObjList[i].ManuallyUpdate();
+			//remove wind vector if wind speed drops
+			if (windObjList[i].IsCompleted()) {
+				windObjList.RemoveAt(i);
 			}
+
+			totalWindForce += windObjList [i].CalcForce ();
 		}
 
-		//remove wind vector if wind speed drops
-		if (windSpeed <= 0) {
-			windForce = Vector3.zero;
-		}
-
-		playerObj.transform.position += windForce;
+		playerObj.transform.position += windMod * totalWindForce;
 
 	}
 
@@ -55,38 +54,10 @@ public class WeatherController : MonoBehaviour {
 	/////////////////////////////////////
 
 	//creates wind in the direction of the camera
-	public void ChangeWind(bool increase = true, Direction windDir = Direction.none) {
-		//set up direction vector
-		windForce.z = 1.0f;
-		switch (windDir) {
-		case Direction.up:
-			windForce.x = 0.0f;
-			windForce.y = 1.0f;
-			break;
-		case Direction.right:
-			windForce.x = 1.0f;
-			windForce.y = 0.0f;
-			break;
-		case Direction.down:
-			windForce.x = 0.0f;
-			windForce.y = -1.0f;
-			break;
-		case Direction.left:
-			windForce.x = -1.0f;
-			windForce.y = 0.0f;
-			break;
-		default:
-		case Direction.none:
-			windForce = Vector3.zero;
-			break;
-		}
-
-		if (windIncrease) {
-			windSpeed++;
-			windMax += 250;
-		} else if (windSpeed > 0) {
-			windSpeed--;
-		}
+	public void ChangeWind(Direction newDir = Direction.none) {
+		//add a new windobj to the list
+		WindObj newWind = new WindObj(newDir);
+		windObjList.Add(newWind);
 	}
 
 	//increases or decreases precipitation
