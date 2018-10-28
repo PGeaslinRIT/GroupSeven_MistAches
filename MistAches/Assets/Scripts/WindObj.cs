@@ -69,4 +69,5 @@ public class WindObj : MonoBehaviour {
 	//getters and setters
 	public void SetMaxDuration (int newMax) { myMaxDuration = newMax; } 
 	public bool IsCompleted () { return completed; }
+	public Direction GetDir () { return myDir; }
 }

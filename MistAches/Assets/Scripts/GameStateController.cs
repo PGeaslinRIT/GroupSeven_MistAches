@@ -30,8 +30,8 @@ public class GameStateController : MonoBehaviour {
 		else if (gameObject.scene.name == "sandbox") {
 			state = 10;
 			on = false;
-			player.transform.position = new Vector3 (-4, -1, 0);
-			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
+//			player.transform.position = new Vector3 (-4, -1, 0);
+//			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
 		}
 	}
 	

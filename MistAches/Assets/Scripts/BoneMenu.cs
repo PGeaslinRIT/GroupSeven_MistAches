@@ -37,43 +37,36 @@ public class BoneMenu : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Alpha1)) {
 			BreakBone (Bones.ribs, Direction.up);
 		}
-
 		if (Input.GetKeyUp(KeyCode.Alpha2)) {
 			BreakBone (Bones.ribs, Direction.right);
-		} 
-
+		}
 		if (Input.GetKeyUp(KeyCode.Alpha3)) {
 			BreakBone (Bones.ribs, Direction.down);
 		}
-
 		if (Input.GetKeyUp(KeyCode.Alpha4)) {
 			BreakBone (Bones.ribs, Direction.left);
 		}
+
+
+		if (Input.GetKeyUp(KeyCode.Alpha5)) {
+			BreakBone (Bones.legs, true);
+		}
+		if (Input.GetKeyUp(KeyCode.Alpha6)) {
+			BreakBone (Bones.legs, false);
+		}
 	}
 
-	//Method to break a specific bone
-	bool BreakBone (Bones bone, Direction dir = Direction.none, bool increase = true) {
-		int breakLimit = maxBrokenBones;
-
-		//arms and legs have a higher limit than other bones
-		if (bone == Bones.arms || bone == Bones.legs) {
-			breakLimit *= armLegCount;
+	//Methods to break a specific bone
+	//break bones that require a direction
+	void BreakBone (Bones bone, Direction dir = Direction.none) {
+		if (!EnoughBones (bone)) {
+			return;
 		}
 
-		//check if bone has reached break limit
-		if (brokenBones[(int)bone] >= breakLimit) {
-			return false;
-		} else {
-			brokenBones[(int)bone]++;
-		}
+		bool validBreak = false;
 
+		//change weather accordingly and check for break validity
 		switch (bone) {
-		case Bones.arms:
-			myWeatherController.ChangePrecipitation (increase);			
-			break;
-		case Bones.legs:
-			myWeatherController.ChangeTemperature (increase);
-			break;
 		case Bones.skull:
 
 			break;
@@ -84,10 +77,58 @@ public class BoneMenu : MonoBehaviour {
 
 			break;
 		case Bones.ribs:
-			myWeatherController.ChangeWind (dir);
+			validBreak = myWeatherController.ChangeWind (dir);
 			break;
 		}
 
-		return true;
+		//only break the bone if the break was valid
+		if (validBreak) {
+			brokenBones [(int)bone]++;
+		}
+	}
+	//break bones that increase/decrease
+	void BreakBone(Bones bone, bool increase = true){
+
+		if (!EnoughBones (bone)) {
+			return;
+		}
+
+		bool validBreak = false;
+
+		//change weather accordingly and check for break validity
+		switch (bone) {
+		case Bones.arms:
+			validBreak = myWeatherController.ChangePrecipitation (increase);			
+			break;
+		case Bones.legs:
+			validBreak = myWeatherController.ChangeTemperature (increase);
+			break;
+		case Bones.skull:
+
+			break;
+		case Bones.neck:
+
+			break;
+		case Bones.back:
+
+			break;
+		}
+
+		//only break the bone if the break was valid
+		if (validBreak) {
+			brokenBones [(int)bone]++;
+		}
+	}
+
+	bool EnoughBones (Bones bone){
+		int breakLimit = maxBrokenBones;
+
+		//arms and legs have a higher limit than other bones
+		if (bone == Bones.arms || bone == Bones.legs) {
+			breakLimit *= armLegCount;
+		}
+
+		//check if bone has reached break limit
+		return (brokenBones[(int)bone] <= breakLimit);
 	}
 }
