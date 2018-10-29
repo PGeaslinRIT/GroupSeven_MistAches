@@ -38,6 +38,15 @@ public class GameStateController : MonoBehaviour {
 			state = 10;
 			boneMenu = false;
 			pause = false;
+
+			btnPlay.onClick.AddListener (Resume);
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("sandbox", 10);
+			});
+			btnQuit.onClick.AddListener (delegate {
+				LoadScene ("mainmenu", 1);
+			});
+
 //			player.transform.position = new Vector3 (-4, -1, 0);
 //			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
 		}
@@ -102,5 +111,13 @@ public class GameStateController : MonoBehaviour {
 		player.GetComponent<Platformer2DUserControl> ().enabled = !paused;
 		player.GetComponent<Animator> ().enabled = !paused;
 		player.GetComponent<Rigidbody2D> ().simulated = !paused;
+	}
+
+	void Resume(){
+		pause = !pause;
+		pausePanel.SetActive (pause);
+		TogglePausePlayer (pause);
+		prevState = 3;
+		state = 10;
 	}
 }
