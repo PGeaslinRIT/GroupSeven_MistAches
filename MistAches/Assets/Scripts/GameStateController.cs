@@ -65,6 +65,9 @@ public class GameStateController : MonoBehaviour {
 				player.GetComponent<Animator> ().enabled = !on;
 				player.GetComponent<Rigidbody2D> ().simulated = !on;
 			}
+			if (Input.GetKeyDown (KeyCode.R)) {
+				ResetLevel ("sandbox");
+			}
 			break;
 		}
 	}
@@ -81,5 +84,9 @@ public class GameStateController : MonoBehaviour {
 	void Restart () {
 		state = 1;
 		SceneManager.LoadScene ("mainmenu");
+	}
+
+	void ResetLevel(string level){
+		SceneManager.LoadScene (level);
 	}
 }
