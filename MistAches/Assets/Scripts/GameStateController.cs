@@ -13,18 +13,23 @@ public class GameStateController : MonoBehaviour {
 	public Button btnPlay;
 	public Button btnQuit;
 	public Button btnRestart;
+	public Button btnControls;
 	public int state;
 	private int prevState;
 	private bool boneMenu;
 	private bool pause;
+	private bool controls;
 
 	// Use this for initialization
 	void Start () {
 		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
+			controls = false;
 			btnPlay.onClick.AddListener (delegate {
 				LoadScene ("sandbox", 10);
 			});
+			btnControls.onClick.AddListener (ToggleControls);
+			btnRestart.onClick.AddListener (ToggleControls);
 			btnQuit.onClick.AddListener (Quit);
 		}
 		else if (gameObject.scene.name == "gameover") {
@@ -119,5 +124,10 @@ public class GameStateController : MonoBehaviour {
 		TogglePausePlayer (pause);
 		prevState = 3;
 		state = 10;
+	}
+
+	void ToggleControls(){
+		controls = !controls;
+		panel.SetActive (controls);
 	}
 }
