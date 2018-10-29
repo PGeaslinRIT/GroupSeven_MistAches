@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 using UnityEngine.UI;
 <<<<<<< HEAD
 using UnityStandardAssets._2D;
+<<<<<<< HEAD
 =======
 >>>>>>> parent of b9276b9... A - Added bone menu buttons
 =======
 >>>>>>> parent of 712f60c... S - added broken bone effects
+=======
+>>>>>>> parent of 09fbd8c... Revert "A - Added bone menu buttons"
 
 enum Bones{
 	skull,
@@ -29,6 +31,11 @@ public class BoneMenu : MonoBehaviour {
 	public int maxBrokenBones = 3;
 	public int armLegCount = 2;
 
+	public Button btnRibs;
+	public Button btnArms;
+	public Button btnLegs;
+	public Button btnSkull;
+
 	// Use this for initialization
 	void Start () {
 		myWeatherController = gameObject.GetComponent<WeatherController> ();
@@ -38,7 +45,6 @@ public class BoneMenu : MonoBehaviour {
 		for (int i = 0; i < 6; i++) {
 			brokenBones [i] = 0;
 		}
-<<<<<<< HEAD
 
 		btnRibs.onClick.AddListener (delegate {
 			BreakBone (Bones.ribs, Direction.up);
@@ -67,12 +73,15 @@ public class BoneMenu : MonoBehaviour {
         smoothSpeed = 2;
         targetRot = 0;
     }
+<<<<<<< HEAD
 =======
 	}
 >>>>>>> parent of b9276b9... A - Added bone menu buttons
 =======
 	}
 >>>>>>> parent of 712f60c... S - added broken bone effects
+=======
+>>>>>>> parent of 09fbd8c... Revert "A - Added bone menu buttons"
 	
 	// Update is called once per frame
 	void Update () {
@@ -133,6 +142,9 @@ public class BoneMenu : MonoBehaviour {
 		if (validBreak) {
 			brokenBones [(int)bone]++;
 		}
+
+		btnRibs.GetComponentInChildren<Text> ().text = "Ribs:\t" + brokenBones [(int)Bones.ribs];
+		btnSkull.GetComponentInChildren<Text> ().text = "Skull:\t" + brokenBones [(int)Bones.skull];
 	}
 	//break bones that increase/decrease
 	void BreakBone(Bones bone, bool increase){
@@ -157,6 +169,9 @@ public class BoneMenu : MonoBehaviour {
 		if (validBreak) {
 			brokenBones [(int)bone]++;
 		}
+			
+		btnArms.GetComponentInChildren<Text> ().text = "Arms:\t" + brokenBones [(int)Bones.arms];
+		btnLegs.GetComponentInChildren<Text> ().text = "Legs:\t" + brokenBones [(int)Bones.legs];
 	}
 
 	//check that there are enough bones to still break
