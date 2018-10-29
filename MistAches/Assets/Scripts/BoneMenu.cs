@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 enum Bones{
 	skull,
@@ -21,6 +22,11 @@ public class BoneMenu : MonoBehaviour {
 	public int maxBrokenBones = 3;
 	public int armLegCount = 2;
 
+	public Button btnRibs;
+	public Button btnArms;
+	public Button btnLegs;
+	public Button btnSkull;
+
 	// Use this for initialization
 	void Start () {
 		myWeatherController = gameObject.GetComponent<WeatherController> ();
@@ -30,6 +36,22 @@ public class BoneMenu : MonoBehaviour {
 		for (int i = 0; i < 6; i++) {
 			brokenBones [i] = 0;
 		}
+
+		btnRibs.onClick.AddListener (delegate {
+			BreakBone (Bones.ribs, Direction.up);
+		});
+
+		btnArms.onClick.AddListener (delegate {
+			BreakBone (Bones.arms, true);
+		});
+
+		btnLegs.onClick.AddListener (delegate {
+			BreakBone (Bones.legs, true);
+		});
+
+		btnSkull.onClick.AddListener (delegate {
+			BreakBone (Bones.skull);
+		});
 	}
 	
 	// Update is called once per frame
@@ -91,6 +113,9 @@ public class BoneMenu : MonoBehaviour {
 		if (validBreak) {
 			brokenBones [(int)bone]++;
 		}
+
+		btnRibs.GetComponentInChildren<Text> ().text = "Ribs:\t" + brokenBones [(int)Bones.ribs];
+		btnSkull.GetComponentInChildren<Text> ().text = "Skull:\t" + brokenBones [(int)Bones.skull];
 	}
 	//break bones that increase/decrease
 	void BreakBone(Bones bone, bool increase){
@@ -115,6 +140,9 @@ public class BoneMenu : MonoBehaviour {
 		if (validBreak) {
 			brokenBones [(int)bone]++;
 		}
+			
+		btnArms.GetComponentInChildren<Text> ().text = "Arms:\t" + brokenBones [(int)Bones.arms];
+		btnLegs.GetComponentInChildren<Text> ().text = "Legs:\t" + brokenBones [(int)Bones.legs];
 	}
 
 	//check that there are enough bones to still break
