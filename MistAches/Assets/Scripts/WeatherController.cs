@@ -19,9 +19,16 @@ public class WeatherController : MonoBehaviour {
 	public int temperature = 0;
 	public GameObject hotTintObj;
 	public GameObject coldTintObj;
+	bool isCold = false;
+	bool isHot = false;
 
 	//precipitation variables
 	public int precipitation = 0;
+	public GameObject precipParticleObj;
+	ParticleSystem myParticleSystem;
+	ParticleSystem.EmissionModule particleEmissions;
+	ParticleSystem.MainModule particleMain;
+	bool isRaining = false;
 
 	//wind variables
 	public float windMod = 0.1f;
@@ -32,6 +39,10 @@ public class WeatherController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		windObjList = new List<WindObj> ();
+
+		myParticleSystem = precipParticleObj.GetComponent<ParticleSystem> ();
+		particleEmissions = myParticleSystem.emission;
+		particleMain = myParticleSystem.main;
 	}
 	
 	// Update is called once per frame
@@ -43,10 +54,11 @@ public class WeatherController : MonoBehaviour {
 		//		for (int i = windObjList.Count - 1; i == 0; i--) {
 		for (int i = 0; i < windObjList.Count; i++) {
 			//update wind object
-			windObjList[i].ManuallyUpdate();
+			windObjList [i].ManuallyUpdate ();
 			//remove wind vector if wind speed drops
-			if (windObjList[i].IsCompleted()) {
-				windObjList.RemoveAt(i);
+			if (windObjList [i].IsCompleted ()) {
+				Destroy (windObjList [i]);
+				windObjList.RemoveAt (i);
 			}
 
 			totalWindForce += windObjList [i].CalcForce ();
@@ -57,6 +69,8 @@ public class WeatherController : MonoBehaviour {
 		for (int i = 0; i < interactableObjects.Count; i++) {
 			interactableObjects [i].transform.position += windMod * totalWindForce;
 		}
+
+		CheckSnow ();
 	}
 
 	/////////////////////////////////////
@@ -74,7 +88,31 @@ public class WeatherController : MonoBehaviour {
 
 	//increases or decreases precipitation
 	public bool ChangePrecipitation(bool increase = true) {
-		return increase;
+		if (increase && precipitation < 2) {
+			precipitation++;
+		} else if (!increase && precipitation > 0) {
+			precipitation--;
+		} else {
+			return false; //invalid break if beyond precipitation range
+		}
+
+		switch (precipitation) {
+		default:
+		case 0:
+			particleEmissions.rateOverTime = 0.0f;
+			isRaining = false;
+			break;
+		case 1:
+			particleEmissions.rateOverTime = 10.0f;
+			isRaining = true;
+			break;
+		case 2:
+			particleEmissions.rateOverTime = 70.0f;
+			isRaining = true;
+			break;
+		}
+
+		return true;
 	}
 
 	//increases or decreases temperature
@@ -91,14 +129,18 @@ public class WeatherController : MonoBehaviour {
 		switch (temperature) {
 		case -1:
 			coldTintObj.SetActive (true);
+			isCold = true;
 			break;
 		default:
 		case 0:
 			coldTintObj.SetActive (false);
 			hotTintObj.SetActive (false);
+			isCold = false;
+			isHot = false;
 			break;
 		case 1:
 			hotTintObj.SetActive (true);
+			isHot = true;
 			break;
 		}
 
@@ -107,5 +149,19 @@ public class WeatherController : MonoBehaviour {
 
 	//creates lightning
 	public void CreateLightning() {}
+
+	//changes between rain and snow
+	void CheckSnow(){
+		if (isRaining && isCold) {
+			//			particleMain.startColor = new ParticleSystem.MinMaxGradient(new Color(255, 255, 255));
+			particleMain.startColor = new Color(255, 255, 255);
+			particleMain.simulationSpeed = 0.25f;
+			particleMain.startSize = 0.15f;
+		} else if (isRaining) {
+			particleMain.startColor = new Color(0, 0, 255);
+			particleMain.simulationSpeed = 1.0f;
+			particleMain.startSize = 0.1f;
+		}
+	}
 
 }

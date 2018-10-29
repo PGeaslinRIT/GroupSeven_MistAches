@@ -54,6 +54,14 @@ public class BoneMenu : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Alpha6)) {
 			BreakBone (Bones.legs, false);
 		}
+
+
+		if (Input.GetKeyUp(KeyCode.Alpha7)) {
+			BreakBone (Bones.arms, true);
+		}
+		if (Input.GetKeyUp(KeyCode.Alpha8)) {
+			BreakBone (Bones.arms, false);
+		}
 	}
 
 	//Methods to break a specific bone
@@ -129,6 +137,6 @@ public class BoneMenu : MonoBehaviour {
 		}
 
 		//check if bone has reached break limit
-		return (brokenBones[(int)bone] <= breakLimit);
+		return (brokenBones[(int)bone] < breakLimit);
 	}
 }
