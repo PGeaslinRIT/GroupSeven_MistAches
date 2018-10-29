@@ -9,27 +9,35 @@ public class GameStateController : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject panel;
+	public GameObject pausePanel;
 	public Button btnPlay;
 	public Button btnQuit;
 	public Button btnRestart;
 	public int state;
-	private bool on;
+	private int prevState;
+	private bool boneMenu;
+	private bool pause;
 
 	// Use this for initialization
 	void Start () {
 		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
-			btnPlay.onClick.AddListener (Play);
+			btnPlay.onClick.AddListener (delegate {
+				LoadScene ("sandbox", 10);
+			});
 			btnQuit.onClick.AddListener (Quit);
 		}
 		else if (gameObject.scene.name == "gameover") {
 			state = 2;
-			btnRestart.onClick.AddListener (Restart);
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("mainmenu", 1);
+			});
 			btnQuit.onClick.AddListener (Quit);
 		}
 		else if (gameObject.scene.name == "sandbox") {
 			state = 10;
-			on = false;
+			boneMenu = false;
+			pause = false;
 //			player.transform.position = new Vector3 (-4, -1, 0);
 //			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
 		}
@@ -46,47 +54,53 @@ public class GameStateController : MonoBehaviour {
 			break;
 		//pause
 		case 3:
+			if (Input.GetKeyDown (KeyCode.Escape)) {
+				pause = !pause;
+				pausePanel.SetActive (pause);
+				TogglePausePlayer (pause);
+				prevState = 3;
+				state = 10;
+			}
 			break;
 		//level 1
 		case 4:
 			break;
 		case 10:
 			if (Input.GetKeyDown (KeyCode.Escape)) {
+				pause = !pause;
+				pausePanel.SetActive (pause);
+				TogglePausePlayer (pause);
+				prevState = 10;
 				state = 3;
 			}
 			if (player.transform.position.y <= -10) {
 				state = 2;
-				SceneManager.LoadScene ("gameover");
+				LoadScene ("gameover", 2);
 			}
 			if (Input.GetKeyDown (KeyCode.Tab)) {
-				on = !on;
-				panel.SetActive (on);
-				player.GetComponent<Platformer2DUserControl> ().enabled = !on;
-				player.GetComponent<Animator> ().enabled = !on;
-				player.GetComponent<Rigidbody2D> ().simulated = !on;
+				boneMenu = !boneMenu;
+				panel.SetActive (boneMenu);
+				TogglePausePlayer (boneMenu);
 			}
 			if (Input.GetKeyDown (KeyCode.R)) {
-				ResetLevel ("sandbox");
+				LoadScene ("sandbox", 10);
 			}
 			break;
 		}
-	}
-
-	void Play () {
-		state = 10;
-		SceneManager.LoadScene ("sandbox");
 	}
 
 	void Quit () {
 		Application.Quit ();
 	}
 
-	void Restart () {
-		state = 1;
-		SceneManager.LoadScene ("mainmenu");
+	void LoadScene(string level, int s){
+		SceneManager.LoadScene (level);
+		state = s;
 	}
 
-	void ResetLevel(string level){
-		SceneManager.LoadScene (level);
+	void TogglePausePlayer(bool paused){
+		player.GetComponent<Platformer2DUserControl> ().enabled = !paused;
+		player.GetComponent<Animator> ().enabled = !paused;
+		player.GetComponent<Rigidbody2D> ().simulated = !paused;
 	}
 }
