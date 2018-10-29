@@ -11,6 +11,13 @@ public enum Direction {
 };
 
 public class WeatherController : MonoBehaviour {
+	//platform references
+	public List<GameObject> allPlatforms = new List<GameObject> ();
+
+	//physics materials
+	public float iceFriction = 0.0f;
+	public float defaultFriction = 0.5f;
+
 	//player weather controller
 	public GameObject playerObj;
 	public List<GameObject> interactableObjects = new List<GameObject> ();
@@ -28,18 +35,17 @@ public class WeatherController : MonoBehaviour {
 	ParticleSystem myParticleSystem;
 	ParticleSystem.EmissionModule particleEmissions;
 	ParticleSystem.MainModule particleMain;
-	bool isRaining = false;
+	bool isPrecipitating = false;
 
 	//wind variables
 	public float windMod = 0.1f;
 	public int windMaxDuration = 250;
-	public List<WindObj> windObjList;
+	public List<WindObj> windObjList = new List<WindObj> ();
 	public Vector3 totalWindForce = Vector3.zero;
 
 	// Use this for initialization
 	void Start () {
-		windObjList = new List<WindObj> ();
-
+		//set up particle system
 		myParticleSystem = precipParticleObj.GetComponent<ParticleSystem> ();
 		particleEmissions = myParticleSystem.emission;
 		particleMain = myParticleSystem.main;
@@ -100,15 +106,15 @@ public class WeatherController : MonoBehaviour {
 		default:
 		case 0:
 			particleEmissions.rateOverTime = 0.0f;
-			isRaining = false;
+			isPrecipitating = false;
 			break;
 		case 1:
 			particleEmissions.rateOverTime = 10.0f;
-			isRaining = true;
+			isPrecipitating = true;
 			break;
 		case 2:
 			particleEmissions.rateOverTime = 70.0f;
-			isRaining = true;
+			isPrecipitating = true;
 			break;
 		}
 
@@ -152,15 +158,28 @@ public class WeatherController : MonoBehaviour {
 
 	//changes between rain and snow
 	void CheckSnow(){
-		if (isRaining && isCold) {
-			//			particleMain.startColor = new ParticleSystem.MinMaxGradient(new Color(255, 255, 255));
+		if (isPrecipitating && isCold) { //snow
 			particleMain.startColor = new Color(255, 255, 255);
 			particleMain.simulationSpeed = 0.25f;
 			particleMain.startSize = 0.15f;
-		} else if (isRaining) {
-			particleMain.startColor = new Color(0, 0, 255);
-			particleMain.simulationSpeed = 1.0f;
-			particleMain.startSize = 0.1f;
+
+			foreach (GameObject obj in allPlatforms) {
+				BoxCollider2D thisCollider = obj.GetComponent<BoxCollider2D> ();
+
+				thisCollider.sharedMaterial.friction = iceFriction;
+			}
+		} else { //not snowing
+			if (isPrecipitating){ //rain
+				particleMain.startColor = new Color(0, 0, 255);
+				particleMain.simulationSpeed = 1.0f;
+				particleMain.startSize = 0.1f;
+			}
+
+			foreach (GameObject obj in allPlatforms) {
+				BoxCollider2D thisCollider = obj.GetComponent<BoxCollider2D> ();
+
+				thisCollider.sharedMaterial.friction = defaultFriction;
+			}
 		}
 	}
 
