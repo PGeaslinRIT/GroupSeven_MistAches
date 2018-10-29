@@ -62,10 +62,14 @@ public class BoneMenu : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Alpha8)) {
 			BreakBone (Bones.arms, false);
 		}
+
+		if (Input.GetKeyUp(KeyCode.Alpha9)) {
+			BreakBone (Bones.skull);
+		}
 	}
 
 	//Methods to break a specific bone
-	//break bones that require a direction
+	//break bones that require a direction. default bone breaking method for bones without direction or increase/decrease
 	void BreakBone (Bones bone, Direction dir = Direction.none) {
 		if (!EnoughBones (bone)) {
 			return;
@@ -75,17 +79,11 @@ public class BoneMenu : MonoBehaviour {
 
 		//change weather accordingly and check for break validity
 		switch (bone) {
-		case Bones.skull:
-
-			break;
-		case Bones.neck:
-
-			break;
-		case Bones.back:
-
-			break;
 		case Bones.ribs:
 			validBreak = myWeatherController.ChangeWind (dir);
+			break;
+		case Bones.skull:
+			validBreak = myWeatherController.CreateLightning ();
 			break;
 		}
 
@@ -95,7 +93,7 @@ public class BoneMenu : MonoBehaviour {
 		}
 	}
 	//break bones that increase/decrease
-	void BreakBone(Bones bone, bool increase = true){
+	void BreakBone(Bones bone, bool increase){
 
 		if (!EnoughBones (bone)) {
 			return;
@@ -111,15 +109,6 @@ public class BoneMenu : MonoBehaviour {
 		case Bones.legs:
 			validBreak = myWeatherController.ChangeTemperature (increase);
 			break;
-		case Bones.skull:
-
-			break;
-		case Bones.neck:
-
-			break;
-		case Bones.back:
-
-			break;
 		}
 
 		//only break the bone if the break was valid
@@ -128,6 +117,7 @@ public class BoneMenu : MonoBehaviour {
 		}
 	}
 
+	//check that there are enough bones to still break
 	bool EnoughBones (Bones bone){
 		int breakLimit = maxBrokenBones;
 

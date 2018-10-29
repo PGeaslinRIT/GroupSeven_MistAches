@@ -43,40 +43,39 @@ public class WeatherController : MonoBehaviour {
 	public List<WindObj> windObjList = new List<WindObj> ();
 	public Vector3 totalWindForce = Vector3.zero;
 
+	//lightning variables
+	public int lightningDuration = 0;
+	public int maxLightningDuration = 5;
+	public GameObject lightningObj; //set manually for the time being
+
 	// Use this for initialization
 	void Start () {
 		//set up particle system
 		myParticleSystem = precipParticleObj.GetComponent<ParticleSystem> ();
 		particleEmissions = myParticleSystem.emission;
 		particleMain = myParticleSystem.main;
+
+		//grab reference to lightning object
+//		SpriteRenderer[] playerChildren = playerObj.GetComponentsInChildren<SpriteRenderer>();
+//		foreach (SpriteRenderer child in playerChildren) {
+//			Debug.Log ("Child name = " + child.name + " Child.gameObjet name = " + child.gameObject.name);
+//			if (child.name == "Lightning") {
+//				lightningObj = child.gameObject;
+//				break;
+//			}
+//		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//reset wind force
-		totalWindForce = Vector3.zero;
+		//update wind
+		UpdateWind();
 
-		//maintain wind durations for each wind force
-		//		for (int i = windObjList.Count - 1; i == 0; i--) {
-		for (int i = 0; i < windObjList.Count; i++) {
-			//update wind object
-			windObjList [i].ManuallyUpdate ();
-			//remove wind vector if wind speed drops
-			if (windObjList [i].IsCompleted ()) {
-				Destroy (windObjList [i]);
-				windObjList.RemoveAt (i);
-			}
+		//update lightning
+		UpdateLightning();
 
-			totalWindForce += windObjList [i].CalcForce ();
-		}
-
-		playerObj.transform.position += windMod * totalWindForce;
-
-		for (int i = 0; i < interactableObjects.Count; i++) {
-			interactableObjects [i].transform.position += windMod * totalWindForce;
-		}
-
-		CheckSnow ();
+		//make snow and rain appear
+		UpdatePrecipitation ();
 	}
 
 	/////////////////////////////////////
@@ -154,10 +153,19 @@ public class WeatherController : MonoBehaviour {
 	}
 
 	//creates lightning
-	public void CreateLightning() {}
+	public bool CreateLightning() {
+		if (!isPrecipitating || lightningDuration > 0 || isCold) {
+			return false; //invalid break if cold, not raining or lightning is already active
+		}
+
+		lightningObj.SetActive (true);
+		lightningDuration = maxLightningDuration;		
+
+		return true;
+	}
 
 	//changes between rain and snow
-	void CheckSnow(){
+	void UpdatePrecipitation(){
 		if (isPrecipitating && isCold) { //snow
 			particleMain.startColor = new Color(255, 255, 255);
 			particleMain.simulationSpeed = 0.25f;
@@ -183,4 +191,52 @@ public class WeatherController : MonoBehaviour {
 		}
 	}
 
+	//update the wind objects
+	void UpdateWind() {
+		//reset wind force
+		totalWindForce = Vector3.zero;
+
+		//maintain wind durations for each wind force
+		for (int i = 0; i < windObjList.Count; i++) {
+			//update wind object
+			windObjList [i].ManuallyUpdate ();
+			//remove wind vector if wind speed drops
+			if (windObjList [i].IsCompleted ()) {
+				Destroy (windObjList [i]);
+				windObjList.RemoveAt (i);
+			}
+
+			totalWindForce += windObjList [i].CalcForce ();
+		}
+
+		//apply wind to all of the objects that it can affect
+		playerObj.transform.position += windMod * totalWindForce;
+
+		for (int i = 0; i < interactableObjects.Count; i++) {
+			interactableObjects [i].transform.position += windMod * totalWindForce;
+		}
+	}
+
+	//update lightning
+	void UpdateLightning() {
+		if (lightningDuration > 0) {
+			//decrement lightning count
+			lightningDuration--;
+
+			BoxCollider2D lightningCollider = lightningObj.GetComponent<BoxCollider2D>();
+
+			//check for collisisons with interactable objects
+			for (int i = 0; i < interactableObjects.Count; i++) {
+				BoxCollider2D thisObjCollider = interactableObjects [i].GetComponent<BoxCollider2D> ();
+
+				if (lightningCollider.IsTouching(thisObjCollider)) {
+					Destroy (interactableObjects[i]);
+					interactableObjects.RemoveAt (i);
+				}
+			}
+		} else {
+			//turn off lightning if no longer active
+			lightningObj.SetActive (false);
+		}
+	}
 }
