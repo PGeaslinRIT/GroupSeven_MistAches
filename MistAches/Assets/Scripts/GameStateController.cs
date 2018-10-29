@@ -7,9 +7,12 @@ using UnityStandardAssets._2D;
 
 public class GameStateController : MonoBehaviour {
 
+	WeatherController weatherController;
+
 	public GameObject player;
 	public GameObject panel;
 	public GameObject pausePanel;
+	public List<GameObject> blocks;
 	public Button btnPlay;
 	public Button btnQuit;
 	public Button btnRestart;
@@ -40,6 +43,7 @@ public class GameStateController : MonoBehaviour {
 			btnQuit.onClick.AddListener (Quit);
 		}
 		else if (gameObject.scene.name == "sandbox") {
+			weatherController = gameObject.GetComponent<WeatherController> ();
 			state = 10;
 			boneMenu = false;
 			pause = false;
@@ -72,6 +76,7 @@ public class GameStateController : MonoBehaviour {
 				pause = !pause;
 				pausePanel.SetActive (pause);
 				TogglePausePlayer (pause);
+				ToggleBlockPause (pause);
 				prevState = 3;
 				state = 10;
 			}
@@ -84,6 +89,7 @@ public class GameStateController : MonoBehaviour {
 				pause = !pause;
 				pausePanel.SetActive (pause);
 				TogglePausePlayer (pause);
+				ToggleBlockPause (pause);
 				prevState = 10;
 				state = 3;
 			}
@@ -95,6 +101,7 @@ public class GameStateController : MonoBehaviour {
 				boneMenu = !boneMenu;
 				panel.SetActive (boneMenu);
 				TogglePausePlayer (boneMenu);
+				ToggleBlockPause (pause);
 			}
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 10);
@@ -116,6 +123,13 @@ public class GameStateController : MonoBehaviour {
 		player.GetComponent<Platformer2DUserControl> ().enabled = !paused;
 		player.GetComponent<Animator> ().enabled = !paused;
 		player.GetComponent<Rigidbody2D> ().simulated = !paused;
+		weatherController.enabled = !paused;
+	}
+
+	void ToggleBlockPause(bool paused){
+		for (int i = 0; i < blocks.Count; i++) {
+			blocks [i].GetComponent<Rigidbody2D> ().simulated = !paused;
+		}
 	}
 
 	void Resume(){
