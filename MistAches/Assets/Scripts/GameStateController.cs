@@ -24,8 +24,14 @@ public class GameStateController : MonoBehaviour {
 	public Button btnDown;
 	public Button btnLeft;
 	public Button btnRight;
+	public GameObject armPanel;
 	public Button btnArms;
+	public Button btnArmsIn;
+	public Button btnArmsDe;
+	public GameObject legPanel;
 	public Button btnLegs;
+	public Button btnLegsIn;
+	public Button btnLegsDe;
 	public Button btnSkull;
 
 	public int state;
@@ -84,8 +90,26 @@ public class GameStateController : MonoBehaviour {
 				ToggleRibMenu (false);
 			});
 
-			btnArms.onClick.AddListener (ToggleBoneMenu);
-			btnLegs.onClick.AddListener (ToggleBoneMenu);
+			btnArms.onClick.AddListener (delegate {
+				ToggleArmMenu (true);
+			});
+			btnArmsIn.onClick.AddListener (delegate {
+				ToggleArmMenu (false);
+			});
+			btnArmsDe.onClick.AddListener (delegate {
+				ToggleArmMenu (false);
+			});
+
+			btnLegs.onClick.AddListener (delegate {
+				ToggleLegMenu (true);
+			});
+			btnLegsIn.onClick.AddListener (delegate {
+				ToggleLegMenu (false);
+			});
+			btnLegsDe.onClick.AddListener (delegate {
+				ToggleLegMenu (false);
+			});
+
 			btnSkull.onClick.AddListener (ToggleBoneMenu);
 
 
@@ -114,7 +138,7 @@ public class GameStateController : MonoBehaviour {
 				state = 10;
 			}
 			break;
-		//ribs menu
+		//bone menus
 		case 4:
 			break;
 		case 10:
@@ -195,6 +219,34 @@ public class GameStateController : MonoBehaviour {
 			state = prevState;
 			prevState = 4;
 			ribPanel.SetActive (false);
+			ToggleBoneMenu ();
+		}
+	}
+
+	void ToggleArmMenu(bool on){
+		if (on) {
+			prevState = state;
+			state = 4;
+			armPanel.SetActive (true);
+			panel.SetActive (false);
+		} else {
+			state = prevState;
+			prevState = 4;
+			armPanel.SetActive (false);
+			ToggleBoneMenu ();
+		}
+	}
+
+	void ToggleLegMenu(bool on){
+		if (on) {
+			prevState = state;
+			state = 4;
+			legPanel.SetActive (true);
+			panel.SetActive (false);
+		} else {
+			state = prevState;
+			prevState = 4;
+			legPanel.SetActive (false);
 			ToggleBoneMenu ();
 		}
 	}

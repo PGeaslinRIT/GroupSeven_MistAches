@@ -90,12 +90,18 @@ public class BoneMenu : MonoBehaviour {
 			BreakBone (Bones.ribs, Direction.right);
 		});
 
-		btnArms.onClick.AddListener (delegate {
+		btnArmsIn.onClick.AddListener (delegate {
 			BreakBone (Bones.arms, true);
 		});
+		btnArmsDe.onClick.AddListener (delegate {
+			BreakBone (Bones.arms, false);
+		});
 
-		btnLegs.onClick.AddListener (delegate {
+		btnLegsIn.onClick.AddListener (delegate {
 			BreakBone (Bones.legs, true);
+		});
+		btnLegsDe.onClick.AddListener (delegate {
+			BreakBone (Bones.legs, false);
 		});
 
 		btnSkull.onClick.AddListener (delegate {
