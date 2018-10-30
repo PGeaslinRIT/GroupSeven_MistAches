@@ -20,10 +20,9 @@ public class Climb : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		playerPos = gameObject.transform.position;
-
-		if (Input.GetKeyDown(KeyCode.W)) {
+		if (Input.GetKey(KeyCode.W)) {
 			Debug.Log ("pressing w");
+			playerPos = gameObject.transform.position;
 
 			foreach (GameObject obj in plantObjList) {
 				if (obj.GetComponent<PlantGrowth>().isGrown && WithinRange(climbRange, playerCollider, obj.GetComponent<BoxCollider2D> ())) {
