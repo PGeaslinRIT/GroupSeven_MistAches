@@ -5,11 +5,11 @@ using UnityEngine;
 public class Climb : MonoBehaviour {
 	private List<GameObject> plantObjList;
 	private BoxCollider2D playerCollider;
-	private Vector3 position;
+	private Vector3 playerPos;
 
-	public float climbSpeed = 0.05f;
+	public float climbRange = 1.0f;
 
-
+	public float climbSpeed = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,19 +20,29 @@ public class Climb : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		position = gameObject.transform.position;
+		playerPos = gameObject.transform.position;
 
-		if (Input.GetKeyUp(KeyCode.W)) {
+		if (Input.GetKeyDown(KeyCode.W)) {
 			Debug.Log ("pressing w");
 
 			foreach (GameObject obj in plantObjList) {
-				if (playerCollider.IsTouching(obj.GetComponent<BoxCollider2D> ())) {
+				if (obj.GetComponent<PlantGrowth>().isGrown && WithinRange(climbRange, playerCollider, obj.GetComponent<BoxCollider2D> ())) {
 					Debug.Log ("climbing tree");
-					position.y += climbSpeed;
+					playerPos.y += climbSpeed;
 				}
 			}
 
-			gameObject.transform.position = position;
+			gameObject.transform.position = playerPos;
 		}
+	}
+
+	//detemine whether two objects are within a range of each other
+	bool WithinRange (float range, BoxCollider2D collider1, BoxCollider2D collider2) {
+		Vector3 c1Pos = collider1.transform.position;
+		Vector3 c2Pos = collider2.transform.position;
+
+		float distanceSqr = (c1Pos - c2Pos).sqrMagnitude;
+
+		return (distanceSqr < range * range);
 	}
 }

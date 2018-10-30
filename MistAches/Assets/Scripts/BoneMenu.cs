@@ -123,39 +123,6 @@ public class BoneMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (Input.GetKeyUp(KeyCode.Alpha1)) {
-//			BreakBone (Bones.ribs, Direction.up);
-//		}
-//		if (Input.GetKeyUp(KeyCode.Alpha2)) {
-//			BreakBone (Bones.ribs, Direction.right);
-//		}
-//		if (Input.GetKeyUp(KeyCode.Alpha3)) {
-//			BreakBone (Bones.ribs, Direction.down);
-//		}
-//		if (Input.GetKeyUp(KeyCode.Alpha4)) {
-//			BreakBone (Bones.ribs, Direction.left);
-//		}
-//
-//
-//		if (Input.GetKeyUp(KeyCode.Alpha5)) {
-//			BreakBone (Bones.legs, true);
-//		}
-//		if (Input.GetKeyUp(KeyCode.Alpha6)) {
-//			BreakBone (Bones.legs, false);
-//		}
-//
-//
-//		if (Input.GetKeyUp(KeyCode.Alpha7)) {
-//			BreakBone (Bones.arms, true);
-//		}
-//		if (Input.GetKeyUp(KeyCode.Alpha8)) {
-//			BreakBone (Bones.arms, false);
-//		}
-//
-//		if (Input.GetKeyUp(KeyCode.Alpha9)) {
-//			BreakBone (Bones.skull);
-//		}
-
 		// BoneEffects updates every frame
 		BoneEffects();
 

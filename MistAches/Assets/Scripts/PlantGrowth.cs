@@ -19,6 +19,8 @@ public class PlantGrowth : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sprite = fullGrownSprite;
 			Destroy(GetComponent<BoxCollider2D>());
 			gameObject.AddComponent<BoxCollider2D> ();
+
+			isGrown = true;
 		}
 	}
 }
