@@ -17,7 +17,6 @@ public class GameStateController : MonoBehaviour {
 	public GameObject pausePanel;
 
 	private List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
-	private List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
 
 	public Button btnPlay;
 	public Button btnQuit;
@@ -54,7 +53,6 @@ public class GameStateController : MonoBehaviour {
 		refManager = GetComponent<ReferenceManager> ();
 		playerObj = refManager.playerObj;
 		interactableObjects = refManager.interactableObjects;
-		allPlatformColliders = refManager.allPlatformColliders;
 
 		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
@@ -200,12 +198,6 @@ public class GameStateController : MonoBehaviour {
 	void ToggleBlockPause(bool paused){
 		for (int i = 0; i < interactableObjects.Count; i++) {
 			interactableObjects [i].GetComponent<Rigidbody2D> ().simulated = !paused;
-		}
-		for (int i = 0; i < allPlatformColliders.Count; i++) {
-			Rigidbody2D thisRigidBody = allPlatformColliders [i].GetComponent<Rigidbody2D> ();
-			if (thisRigidBody != null) {
-				thisRigidBody.simulated = !paused;
-			}
 		}
 	}
 
