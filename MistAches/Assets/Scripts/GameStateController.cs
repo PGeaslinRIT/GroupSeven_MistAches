@@ -179,7 +179,7 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 10);
 			}
-			if (playerObj.GetComponent<BoxCollider2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
 				GoalNextScene goalScene = goalObj.GetComponent<GoalNextScene> ();
 				LoadScene (goalScene.nextScene, goalScene.nextSceneIndex);
 				state = goalScene.nextSceneIndex;
