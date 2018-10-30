@@ -26,8 +26,6 @@ public class WeatherController : MonoBehaviour {
 	public int temperature = 0;
 	public GameObject hotTintObj;
 	public GameObject coldTintObj;
-	bool isCold = false;
-	bool isHot = false;
 
 	//precipitation variables
 	public int precipitation = 0;
@@ -35,7 +33,6 @@ public class WeatherController : MonoBehaviour {
 	ParticleSystem myParticleSystem;
 	ParticleSystem.EmissionModule particleEmissions;
 	ParticleSystem.MainModule particleMain;
-	bool isPrecipitating = false;
 
 	//wind variables
 	public float windMod = 0.1f;
@@ -47,6 +44,14 @@ public class WeatherController : MonoBehaviour {
 	public int lightningDuration = 0;
 	public int maxLightningDuration = 5;
 	public GameObject lightningObj; //set manually for the time being
+
+	//methods to get the weather states
+	public bool IsRaining () { return (precipitation > 0 && temperature > -1); }
+	public bool IsSnowing () { return (precipitation > 0 && temperature == -1); }
+	public bool IsPrecipitating () { return (precipitation > 0); }
+	public bool IsHot () { return (temperature == 1); }
+	public bool IsCold () { return (temperature == -1); }
+	public bool IsWindy () { return (windObjList.Count > 0); }
 
 	// Use this for initialization
 	void Start () {
@@ -105,15 +110,12 @@ public class WeatherController : MonoBehaviour {
 		default:
 		case 0:
 			particleEmissions.rateOverTime = 0.0f;
-			isPrecipitating = false;
 			break;
 		case 1:
 			particleEmissions.rateOverTime = 10.0f;
-			isPrecipitating = true;
 			break;
 		case 2:
 			particleEmissions.rateOverTime = 70.0f;
-			isPrecipitating = true;
 			break;
 		}
 
@@ -134,18 +136,14 @@ public class WeatherController : MonoBehaviour {
 		switch (temperature) {
 		case -1:
 			coldTintObj.SetActive (true);
-			isCold = true;
 			break;
 		default:
 		case 0:
 			coldTintObj.SetActive (false);
 			hotTintObj.SetActive (false);
-			isCold = false;
-			isHot = false;
 			break;
 		case 1:
 			hotTintObj.SetActive (true);
-			isHot = true;
 			break;
 		}
 
@@ -154,7 +152,7 @@ public class WeatherController : MonoBehaviour {
 
 	//creates lightning
 	public bool CreateLightning() {
-		if (!isPrecipitating || lightningDuration > 0 || isCold) {
+		if (!IsRaining() || lightningDuration > 0) {
 			return false; //invalid break if cold, not raining or lightning is already active
 		}
 
@@ -164,9 +162,13 @@ public class WeatherController : MonoBehaviour {
 		return true;
 	}
 
+	/////////////////////////////////////
+	///  methods to maintain weather  ///
+	/////////////////////////////////////
+
 	//changes between rain and snow
 	void UpdatePrecipitation(){
-		if (isPrecipitating && isCold) { //snow
+		if (IsSnowing()) { //snow
 			particleMain.startColor = new Color(255, 255, 255);
 			particleMain.simulationSpeed = 0.25f;
 			particleMain.startSize = 0.15f;
@@ -177,7 +179,7 @@ public class WeatherController : MonoBehaviour {
 				thisCollider.sharedMaterial.friction = iceFriction;
 			}
 		} else { //not snowing
-			if (isPrecipitating){ //rain
+			if (IsRaining()){ //rain
 				particleMain.startColor = new Color(0, 0, 255);
 				particleMain.simulationSpeed = 1.0f;
 				particleMain.startSize = 0.1f;
