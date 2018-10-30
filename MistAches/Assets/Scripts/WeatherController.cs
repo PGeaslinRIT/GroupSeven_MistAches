@@ -12,15 +12,17 @@ public enum Direction {
 
 public class WeatherController : MonoBehaviour {
 	//platform references
-	public List<GameObject> allPlatforms = new List<GameObject> ();
+	public List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
 
 	//physics materials
-	public float iceFriction = 0.0f;
-	public float defaultFriction = 0.5f;
+//	public float iceFriction = 0.0f;
+//	public float defaultFriction = 0.4f;
+	public PhysicsMaterial2D iceMat;
+	public PhysicsMaterial2D defaultMat;
 
 	//player weather controller
 	public GameObject playerObj;
-	public List<GameObject> interactableObjects = new List<GameObject> ();
+	public List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
 
 	//temperature variables
 	public int temperature = 0;
@@ -49,6 +51,7 @@ public class WeatherController : MonoBehaviour {
 	public bool IsRaining () { return (precipitation > 0 && temperature > -1); }
 	public bool IsSnowing () { return (precipitation > 0 && temperature == -1); }
 	public bool IsPrecipitating () { return (precipitation > 0); }
+	public bool IsStorming () { return (precipitation == 2); }
 	public bool IsHot () { return (temperature == 1); }
 	public bool IsCold () { return (temperature == -1); }
 	public bool IsWindy () { return (windObjList.Count > 0); }
@@ -133,18 +136,16 @@ public class WeatherController : MonoBehaviour {
 		}
 
 		//set appropriate tint
-		switch (temperature) {
-		case -1:
+		if (IsCold()) {
 			coldTintObj.SetActive (true);
-			break;
-		default:
-		case 0:
+		} else {
 			coldTintObj.SetActive (false);
-			hotTintObj.SetActive (false);
-			break;
-		case 1:
+		}
+
+		if (IsHot()) {
 			hotTintObj.SetActive (true);
-			break;
+		} else {
+			hotTintObj.SetActive (false);
 		}
 
 		return true;
@@ -153,7 +154,7 @@ public class WeatherController : MonoBehaviour {
 	//creates lightning
 	public bool CreateLightning() {
 		if (!IsRaining() || lightningDuration > 0) {
-			return false; //invalid break if cold, not raining or lightning is already active
+			return false; //invalid break if not raining or lightning is already active
 		}
 
 		lightningObj.SetActive (true);
@@ -167,30 +168,32 @@ public class WeatherController : MonoBehaviour {
 	/////////////////////////////////////
 
 	//changes between rain and snow
-	void UpdatePrecipitation(){
-		if (IsSnowing()) { //snow
-			particleMain.startColor = new Color(255, 255, 255);
-			particleMain.simulationSpeed = 0.25f;
-			particleMain.startSize = 0.15f;
-
-			foreach (GameObject obj in allPlatforms) {
-				BoxCollider2D thisCollider = obj.GetComponent<BoxCollider2D> ();
-
-				thisCollider.sharedMaterial.friction = iceFriction;
-			}
-		} else { //not snowing
-			if (IsRaining()){ //rain
+	void UpdatePrecipitation() {
+		if (IsPrecipitating ()) {
+			//update particles to match weather
+			if (IsSnowing()) {
+				particleMain.startColor = new Color(255, 255, 255);
+				particleMain.simulationSpeed = 0.25f;
+				particleMain.startSize = 0.15f;
+			} else if (IsRaining()){ //rain
 				particleMain.startColor = new Color(0, 0, 255);
 				particleMain.simulationSpeed = 1.0f;
 				particleMain.startSize = 0.1f;
 			}
 
-			foreach (GameObject obj in allPlatforms) {
-				BoxCollider2D thisCollider = obj.GetComponent<BoxCollider2D> ();
+			//check for iciness
+			foreach (GameObject colliderObj in allPlatformColliders) {
+				if (IsSnowing ()) {
+					colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = iceMat;
+				} else {
+					colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = defaultMat;
+				}
 
-				thisCollider.sharedMaterial.friction = defaultFriction;
+				colliderObj.SetActive (false);
+				colliderObj.SetActive (true);
 			}
 		}
+
 	}
 
 	//update the wind objects
