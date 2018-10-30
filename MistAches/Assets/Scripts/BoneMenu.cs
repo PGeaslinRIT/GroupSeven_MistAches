@@ -37,6 +37,13 @@ public class BoneMenu : MonoBehaviour {
 	float maxOrtho; // largest possible camera
 	public float targetRot; // target rotation for the camera
 
+	// all the audio files
+	public GameObject cronchObj;
+	public GameObject windObj;
+	public GameObject thunderObj;
+	public GameObject coughObj;
+	public GameObject rainObj;
+
 	//broken bone trackers
 	public int[] brokenBones;
 
@@ -119,10 +126,50 @@ public class BoneMenu : MonoBehaviour {
         targetOrtho = cameraObj.orthographicSize;
         smoothSpeed = 2;
         targetRot = 0;
+
+		// collecting the AudioSources from the objects
+		AudioSource boneCronch = cronchObj.GetComponent<AudioSource>();
+		AudioSource wind = windObj.GetComponent<AudioSource>();
+		AudioSource rain = rainObj.GetComponent<AudioSource>();
+		AudioSource cough = coughObj.GetComponent<AudioSource>();
+		AudioSource thunder = thunderObj.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+//		if (Input.GetKeyUp(KeyCode.Alpha1)) {
+//			BreakBone (Bones.ribs, Direction.up);
+//		}
+//		if (Input.GetKeyUp(KeyCode.Alpha2)) {
+//			BreakBone (Bones.ribs, Direction.right);
+//		}
+//		if (Input.GetKeyUp(KeyCode.Alpha3)) {
+//			BreakBone (Bones.ribs, Direction.down);
+//		}
+//		if (Input.GetKeyUp(KeyCode.Alpha4)) {
+//			BreakBone (Bones.ribs, Direction.left);
+//		}
+//
+//
+//		if (Input.GetKeyUp(KeyCode.Alpha5)) {
+//			BreakBone (Bones.legs, true);
+//		}
+//		if (Input.GetKeyUp(KeyCode.Alpha6)) {
+//			BreakBone (Bones.legs, false);
+//		}
+//
+//
+//		if (Input.GetKeyUp(KeyCode.Alpha7)) {
+//			BreakBone (Bones.arms, true);
+//		}
+//		if (Input.GetKeyUp(KeyCode.Alpha8)) {
+//			BreakBone (Bones.arms, false);
+//		}
+//
+//		if (Input.GetKeyUp(KeyCode.Alpha9)) {
+//			BreakBone (Bones.skull);
+//		}
+
 		// BoneEffects updates every frame
 		BoneEffects();
 
