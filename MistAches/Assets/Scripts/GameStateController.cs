@@ -10,9 +10,12 @@ public class GameStateController : MonoBehaviour {
 	WeatherController weatherController;
 
 	public GameObject player;
+
 	public GameObject panel;
 	public GameObject pausePanel;
+
 	public List<GameObject> blocks;
+
 	public Button btnPlay;
 	public Button btnQuit;
 	public Button btnRestart;
@@ -24,14 +27,17 @@ public class GameStateController : MonoBehaviour {
 	public Button btnDown;
 	public Button btnLeft;
 	public Button btnRight;
+
 	public GameObject armPanel;
 	public Button btnArms;
 	public Button btnArmsIn;
 	public Button btnArmsDe;
+
 	public GameObject legPanel;
 	public Button btnLegs;
 	public Button btnLegsIn;
 	public Button btnLegsDe;
+
 	public Button btnSkull;
 
 	public int state;
@@ -185,7 +191,7 @@ public class GameStateController : MonoBehaviour {
 
 	void ToggleBlockPause(bool paused){
 		for (int i = 0; i < blocks.Count; i++) {
-			blocks [i].GetComponent<Rigidbody2D> ().simulated = !paused;
+			blocks [i].GetComponent<Rigidbody2D> ().isKinematic = !paused;
 		}
 	}
 
