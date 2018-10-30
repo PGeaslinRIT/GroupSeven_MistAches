@@ -37,6 +37,13 @@ public class BoneMenu : MonoBehaviour {
 	float maxOrtho; // largest possible camera
 	public float targetRot; // target rotation for the camera
 
+	// all the audio files
+	public GameObject cronchObj;
+	public GameObject windObj;
+	public GameObject thunderObj;
+	public GameObject coughObj;
+	public GameObject rainObj;
+
 	//broken bone trackers
 	public int[] brokenBones;
 
@@ -119,6 +126,13 @@ public class BoneMenu : MonoBehaviour {
         targetOrtho = cameraObj.orthographicSize;
         smoothSpeed = 2;
         targetRot = 0;
+
+		// collecting the AudioSources from the objects
+		AudioSource boneCronch = cronchObj.GetComponent<AudioSource>();
+		AudioSource wind = windObj.GetComponent<AudioSource>();
+		AudioSource rain = rainObj.GetComponent<AudioSource>();
+		AudioSource cough = coughObj.GetComponent<AudioSource>();
+		AudioSource thunder = thunderObj.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
