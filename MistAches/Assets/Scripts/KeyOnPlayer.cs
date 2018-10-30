@@ -13,6 +13,10 @@ public class KeyOnPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (hasKey) {
+			gameObject.transform.FindChild ("Key").gameObject.SetActive (true);
+		} else {
+			gameObject.transform.FindChild ("Key").gameObject.SetActive (false);
+		}
 	}
 }
