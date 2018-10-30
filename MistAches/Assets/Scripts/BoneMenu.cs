@@ -14,15 +14,11 @@ enum Bones{
 };
 
 public class BoneMenu : MonoBehaviour {
-	//weather controller reference
+	//important references
+	private ReferenceManager refManager;
 	WeatherController myWeatherController;
-
-	// the main camera, for use in the broken neck/skull effects
-	public Camera myCam;
-
-	// grab a PlatformerCahracter2D script, which comes in the unity built-in 2D platformer package
-	// it controls our robot boi's movement, and this will let us modify it
-	public PlatformerCharacter2D pC2D;
+	private Camera cameraObj;
+	private PlatformerCharacter2D playerObj;
 
 	// the initial max speed of the character, which then can get reduced as legs break
 	// it's just equal to the maxSpeed value of the character
@@ -65,7 +61,15 @@ public class BoneMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		myWeatherController = gameObject.GetComponent<WeatherController> ();
+		//get reference manager
+		refManager = GetComponent<ReferenceManager>();
+
+		//get weather controller
+		myWeatherController = GetComponent<WeatherController> ();
+
+		//get references from reference manager
+		playerObj = refManager.playerObj;
+		cameraObj = refManager.cameraObj;
 
 		brokenBones = new int[6];
 
@@ -99,12 +103,12 @@ public class BoneMenu : MonoBehaviour {
 		});
 
         // stuff for manipulating the player
-        initSpeed = pC2D.m_MaxSpeed;
+        initSpeed = playerObj.m_MaxSpeed;
         tick = 0;
         stopMoving = false;
 
         // setting default camera values
-        targetOrtho = myCam.orthographicSize;
+        targetOrtho = cameraObj.orthographicSize;
         smoothSpeed = 2;
         targetRot = 0;
     }
@@ -148,10 +152,10 @@ public class BoneMenu : MonoBehaviour {
 		BoneEffects();
 
 		// adjust the camera as needed
-		myCam.orthographicSize = Mathf.MoveTowards(myCam.orthographicSize, targetOrtho, smoothSpeed * Time.deltaTime);
-		myCam.transform.rotation = Quaternion.Euler(0, 0, targetRot); // this snaps, but it does work
-		// float test = Mathf.MoveTowards(myCam.transform.rotation.z, targetRot, smoothSpeed * Time.deltaTime);
-		// myCam.transform.rotation = Quaternion.Euler(0, 0, test); // this snaps instead of it being smooth, but that's a TBD issue
+		cameraObj.orthographicSize = Mathf.MoveTowards(cameraObj.orthographicSize, targetOrtho, smoothSpeed * Time.deltaTime);
+		cameraObj.transform.rotation = Quaternion.Euler(0, 0, targetRot); // this snaps, but it does work
+		// float test = Mathf.MoveTowards(cameraObj.transform.rotation.z, targetRot, smoothSpeed * Time.deltaTime);
+		// cameraObj.transform.rotation = Quaternion.Euler(0, 0, test); // this snaps instead of it being smooth, but that's a TBD issue
 
 	}
 
@@ -243,7 +247,7 @@ public class BoneMenu : MonoBehaviour {
 		// after at most 4 seconds, let the player move again
 		if (stopMoving == true)
 		{
-			pC2D.m_MaxSpeed = 0;
+			playerObj.m_MaxSpeed = 0;
 			if (tick % 120 == 0)
 			{
 				stopMoving = false;
@@ -253,7 +257,7 @@ public class BoneMenu : MonoBehaviour {
 		// LEGS first - reduce player speed by 1 (out of 7ish) for each broken leg, assuming the player is actually allowed to move
 		if (stopMoving == false)
 		{
-			pC2D.m_MaxSpeed = (initSpeed - (brokenBones[5] * 1));
+			playerObj.m_MaxSpeed = (initSpeed - (brokenBones[5] * 1));
 		}
 
 		// ARMS are currently nothign, as breaking your arms doesn't do anything

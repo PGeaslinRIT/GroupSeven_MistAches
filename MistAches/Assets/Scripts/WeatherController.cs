@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets._2D;
 
 public enum Direction {
 	up,
@@ -11,42 +12,39 @@ public enum Direction {
 };
 
 public class WeatherController : MonoBehaviour {
-	//platform references
-	public List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
+	//important object references
+	private ReferenceManager refManager;
+	private PlatformerCharacter2D playerObj;
+	private Camera cameraObj;
+	private List<GameObject> interactableObjects; //set manually for now
+	private List<GameObject> allPlatformColliders; //set manually for now
 
 	//physics materials
-//	public float iceFriction = 0.0f;
-//	public float defaultFriction = 0.4f;
 	public PhysicsMaterial2D iceMat;
 	public PhysicsMaterial2D defaultMat;
 
-	//player weather controller
-	public GameObject playerObj;
-	public List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
-
 	//temperature variables
 	public int temperature = 0;
-	public GameObject hotTintObj;
-	public GameObject coldTintObj;
+	private GameObject hotTintObj;
+	private GameObject coldTintObj;
 
 	//precipitation variables
 	public int precipitation = 0;
-	public GameObject precipParticleObj;
-	ParticleSystem myParticleSystem;
-	ParticleSystem.EmissionModule particleEmissions;
-	ParticleSystem.MainModule particleMain;
+	private ParticleSystem myParticleSystem;
+	private ParticleSystem.EmissionModule particleEmissions;
+	private ParticleSystem.MainModule particleMain;
 
 	//wind variables
 	public float windMod = 0.1f;
 	public int windMaxDuration = 250;
-	public List<WindObj> windObjList = new List<WindObj> ();
-	public Vector3 totalWindForce = Vector3.zero;
+	private List<WindObj> windObjList = new List<WindObj> ();
+	private Vector3 totalWindForce = Vector3.zero;
 	public float windRange = 5.0f;
 
 	//lightning variables
 	public int lightningDuration = 0;
 	public int maxLightningDuration = 5;
-	public GameObject lightningObj; //set manually for the time being
+	private GameObject lightningObj;
 
 	//methods to get the weather states
 	public bool IsRaining () { return (precipitation > 0 && temperature > -1); }
@@ -59,20 +57,26 @@ public class WeatherController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//get reference manager
+		refManager = GetComponent<ReferenceManager>();
+
+		//get references from reference manager
+		playerObj = refManager.playerObj;
+		cameraObj = refManager.cameraObj;
+		interactableObjects = refManager.interactableObjects;
+		allPlatformColliders = refManager.allPlatformColliders;
+
 		//set up particle system
-		myParticleSystem = precipParticleObj.GetComponent<ParticleSystem> ();
+		myParticleSystem = cameraObj.transform.FindChild("PrecipitationParticles").gameObject.GetComponent<ParticleSystem> ();
 		particleEmissions = myParticleSystem.emission;
 		particleMain = myParticleSystem.main;
 
-		//grab reference to lightning object
-//		SpriteRenderer[] playerChildren = playerObj.GetComponentsInChildren<SpriteRenderer>();
-//		foreach (SpriteRenderer child in playerChildren) {
-//			Debug.Log ("Child name = " + child.name + " Child.gameObjet name = " + child.gameObject.name);
-//			if (child.name == "Lightning") {
-//				lightningObj = child.gameObject;
-//				break;
-//			}
-//		}
+		//get tints
+		hotTintObj = refManager.hotTintObj;
+		coldTintObj = refManager.coldTintObj;
+
+		//get lightning object
+		lightningObj = playerObj.transform.FindChild("Lightning").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -178,6 +182,21 @@ public class WeatherController : MonoBehaviour {
 	///  methods to maintain weather  ///
 	/////////////////////////////////////
 
+	//updates materials 
+	void UpdateMaterials () {
+		//check for iciness
+		foreach (GameObject colliderObj in allPlatformColliders) {
+			if (IsSnowing ()) {
+				colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = iceMat;
+			} else if (IsHot()) {
+				colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = defaultMat;
+			}
+
+			colliderObj.SetActive (false);
+			colliderObj.SetActive (true);
+		}
+	}
+
 	//changes between rain and snow
 	void UpdatePrecipitation() {
 		if (IsPrecipitating ()) {
@@ -190,18 +209,6 @@ public class WeatherController : MonoBehaviour {
 				particleMain.startColor = new Color(0, 0, 255);
 				particleMain.simulationSpeed = 1.0f;
 				particleMain.startSize = 0.1f;
-			}
-
-			//check for iciness
-			foreach (GameObject colliderObj in allPlatformColliders) {
-				if (IsSnowing ()) {
-					colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = iceMat;
-				} else {
-					colliderObj.GetComponent<BoxCollider2D>().sharedMaterial = defaultMat;
-				}
-
-				colliderObj.SetActive (false);
-				colliderObj.SetActive (true);
 			}
 		}
 
