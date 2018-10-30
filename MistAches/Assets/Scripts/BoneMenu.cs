@@ -43,6 +43,8 @@ public class BoneMenu : MonoBehaviour {
 	public int maxBrokenBones = 3;
 	public int armLegCount = 2;
 
+	public Text currentBroken;
+
 	public Button btnRibs;
 	public Button btnRibsUp;
 	public Button btnRibsDown;
@@ -194,6 +196,12 @@ public class BoneMenu : MonoBehaviour {
 
 		btnRibs.GetComponentInChildren<Text> ().text = "Ribs:\t" + brokenBones [(int)Bones.ribs];
 		btnSkull.GetComponentInChildren<Text> ().text = "Skull:\t" + brokenBones [(int)Bones.skull];
+
+		int broken = 0;
+		for (int i = 0; i < brokenBones.Length; i++) {
+			broken += brokenBones [i];
+		}
+		currentBroken.text = "Bones Broken:\t\t" + broken;
 	}
 	//break bones that increase/decrease
 	void BreakBone(Bones bone, bool increase){
@@ -221,6 +229,12 @@ public class BoneMenu : MonoBehaviour {
 			
 		btnArms.GetComponentInChildren<Text> ().text = "Arms:\t" + brokenBones [(int)Bones.arms];
 		btnLegs.GetComponentInChildren<Text> ().text = "Legs:\t" + brokenBones [(int)Bones.legs];
+
+		int broken = 0;
+		for (int i = 0; i < brokenBones.Length; i++) {
+			broken += brokenBones [i];
+		}
+		currentBroken.text = "Bones Broken:\t\t" + broken;
 	}
 
 	//check that there are enough bones to still break
