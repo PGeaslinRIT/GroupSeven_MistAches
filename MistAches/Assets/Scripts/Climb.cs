@@ -23,8 +23,11 @@ public class Climb : MonoBehaviour {
 		position = gameObject.transform.position;
 
 		if (Input.GetKeyUp(KeyCode.W)) {
+			Debug.Log ("pressing w");
+
 			foreach (GameObject obj in plantObjList) {
 				if (playerCollider.IsTouching(obj.GetComponent<BoxCollider2D> ())) {
+					Debug.Log ("climbing tree");
 					position.y += climbSpeed;
 				}
 			}

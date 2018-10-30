@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets._2D;
 
 public class KeyLock : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class KeyLock : MonoBehaviour {
 	public List<GameObject> keys;
 	public List<GameObject> locks;
 
-	private GameObject player;
+	private PlatformerCharacter2D player;
 
 	// Use this for initialization
 	void Start () {
