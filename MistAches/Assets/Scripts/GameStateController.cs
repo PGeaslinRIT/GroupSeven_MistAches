@@ -164,7 +164,7 @@ public class GameStateController : MonoBehaviour {
 				boneMenu = !boneMenu;
 				panel.SetActive (boneMenu);
 				TogglePausePlayer (boneMenu);
-				ToggleBlockPause (pause);
+				ToggleBlockPause (boneMenu);
 			}
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 10);
