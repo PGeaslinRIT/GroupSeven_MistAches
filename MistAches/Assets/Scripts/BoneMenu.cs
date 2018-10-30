@@ -305,9 +305,9 @@ public class BoneMenu : MonoBehaviour {
 			{
 				targetOrtho = 2f;
 			}
-			if (targetOrtho >= 10.0) // and can't zoom insanely far out, either
+			if (targetOrtho >= 5.0) // and can't zoom insanely far out, either
 			{
-				targetOrtho = 10.0f;
+				targetOrtho = 5.0f;
 			}
 		}
 
