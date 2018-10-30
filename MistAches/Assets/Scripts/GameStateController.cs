@@ -16,6 +16,7 @@ public class GameStateController : MonoBehaviour {
 
 	public GameObject panel;
 	public GameObject pausePanel;
+	public GameObject nextPanel;
 
 	private List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
 
@@ -43,6 +44,10 @@ public class GameStateController : MonoBehaviour {
 
 	public Button btnSkull;
 
+	public Button btnNext;
+	public Button btnNextMenu;
+	public Button btnNextQuit;
+
 	public int state;
 	private int prevState;
 	private bool boneMenu;
@@ -62,15 +67,13 @@ public class GameStateController : MonoBehaviour {
 			btnControls.onClick.AddListener (ToggleControls);
 			btnRestart.onClick.AddListener (ToggleControls);
 			btnQuit.onClick.AddListener (Quit);
-		}
-		else if (gameObject.scene.name == "gameover") {
+		} else if (gameObject.scene.name == "gameover") {
 			state = 2;
 			btnRestart.onClick.AddListener (delegate {
 				LoadScene ("mainmenu", 1);
 			});
 			btnQuit.onClick.AddListener (Quit);
-		}
-		else if (gameObject.scene.name == "sandbox") {
+		} else if (gameObject.scene.name == "sandbox") {
 			playerObj = refManager.playerObj;
 			goalObj = refManager.goalObj;
 			interactableObjects = refManager.interactableObjects;
@@ -127,9 +130,15 @@ public class GameStateController : MonoBehaviour {
 
 			btnSkull.onClick.AddListener (ToggleBoneMenu);
 
-
-//			playerObj.transform.position = new Vector3 (-4, -1, 0);
-//			playerObj.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
+			btnNext.onClick.AddListener (delegate {
+				LoadScene ("testlevel", 11);
+			});
+			btnNextMenu.onClick.AddListener (delegate {
+				LoadScene ("mainmenu", 1);
+			});
+			btnNextQuit.onClick.AddListener (Quit);
+		} else if (gameObject.scene.name == "testlevel") {
+			
 		}
 	}
 	
@@ -157,6 +166,9 @@ public class GameStateController : MonoBehaviour {
 		//bone menus
 		case 4:
 			break;
+		//next level
+		case 5:
+			break;
 		case 10:
 			if (Input.GetKeyDown (KeyCode.Escape)) {
 				pause = !pause;
@@ -180,10 +192,12 @@ public class GameStateController : MonoBehaviour {
 				LoadScene ("sandbox", 10);
 			}
 			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
-				GoalNextScene goalScene = goalObj.GetComponent<GoalNextScene> ();
-				LoadScene (goalScene.nextScene, goalScene.nextSceneIndex);
-				state = goalScene.nextSceneIndex;
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
 			}
+			break;
+		case 11:
 			break;
 		}
 	}
