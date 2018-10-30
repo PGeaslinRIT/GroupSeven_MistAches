@@ -30,8 +30,8 @@ public class KeyLock : MonoBehaviour {
 
 		for (int i = 0; i < locks.Count; i++) {
 			if (player.GetComponent<BoxCollider2D> ().IsTouching (locks [i].GetComponent<BoxCollider2D> ()) && player.GetComponent<KeyOnPlayer> ().hasKey == true) {
-				Destroy (locks [j]);
-				locks.RemoveAt (j);
+				Destroy (locks [i]);
+				locks.RemoveAt (i);
 				player.GetComponent<KeyOnPlayer> ().hasKey = false;
 			}
 		}
