@@ -51,8 +51,6 @@ public class GameStateController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		refManager = GetComponent<ReferenceManager> ();
-		playerObj = refManager.playerObj;
-		interactableObjects = refManager.interactableObjects;
 
 		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
@@ -72,6 +70,9 @@ public class GameStateController : MonoBehaviour {
 			btnQuit.onClick.AddListener (Quit);
 		}
 		else if (gameObject.scene.name == "sandbox") {
+			playerObj = refManager.playerObj;
+			interactableObjects = refManager.interactableObjects;
+
 			weatherController = gameObject.GetComponent<WeatherController> ();
 			state = 10;
 			boneMenu = false;
