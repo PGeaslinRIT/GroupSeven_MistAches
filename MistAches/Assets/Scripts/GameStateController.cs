@@ -12,6 +12,7 @@ public class GameStateController : MonoBehaviour {
 	WeatherController weatherController;
 
 	private PlatformerCharacter2D playerObj;
+	private GameObject goalObj;
 
 	public GameObject panel;
 	public GameObject pausePanel;
@@ -71,6 +72,7 @@ public class GameStateController : MonoBehaviour {
 		}
 		else if (gameObject.scene.name == "sandbox") {
 			playerObj = refManager.playerObj;
+			goalObj = refManager.goalObj;
 			interactableObjects = refManager.interactableObjects;
 
 			weatherController = gameObject.GetComponent<WeatherController> ();
@@ -135,6 +137,7 @@ public class GameStateController : MonoBehaviour {
 	void Update () {
 		switch (state) {
 		//main menu
+		default:
 		case 1:
 			break;
 		//game over
@@ -175,6 +178,11 @@ public class GameStateController : MonoBehaviour {
 			}
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 10);
+			}
+			if (playerObj.GetComponent<BoxCollider2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				GoalNextScene goalScene = goalObj.GetComponent<GoalNextScene> ();
+				LoadScene (goalScene.nextScene, goalScene.nextSceneIndex);
+				state = goalScene.nextSceneIndex;
 			}
 			break;
 		}

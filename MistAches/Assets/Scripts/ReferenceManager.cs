@@ -7,6 +7,7 @@ public class ReferenceManager : MonoBehaviour {
 
 	public PlatformerCharacter2D playerObj;
 	public Camera cameraObj;
+	public GameObject goalObj;
 
 	public List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
 	public List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
