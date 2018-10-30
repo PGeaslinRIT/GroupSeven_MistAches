@@ -191,7 +191,7 @@ public class GameStateController : MonoBehaviour {
 
 	void ToggleBlockPause(bool paused){
 		for (int i = 0; i < blocks.Count; i++) {
-			blocks [i].GetComponent<Rigidbody2D> ().isKinematic = !paused;
+			blocks [i].GetComponent<Rigidbody2D> ().simulated = !paused;
 		}
 	}
 
