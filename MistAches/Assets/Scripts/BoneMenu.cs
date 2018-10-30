@@ -52,8 +52,15 @@ public class BoneMenu : MonoBehaviour {
 	public Button btnRibsDown;
 	public Button btnRibsLeft;
 	public Button btnRibsRight;
+
 	public Button btnArms;
+	public Button btnArmsIn;
+	public Button btnArmsDe;
+
 	public Button btnLegs;
+	public Button btnLegsIn;
+	public Button btnLegsDe;
+
 	public Button btnSkull;
 
 	// Use this for initialization
