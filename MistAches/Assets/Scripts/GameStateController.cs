@@ -74,71 +74,25 @@ public class GameStateController : MonoBehaviour {
 			});
 			btnQuit.onClick.AddListener (Quit);
 		} else if (gameObject.scene.name == "sandbox") {
-			playerObj = refManager.playerObj;
-			goalObj = refManager.goalObj;
-			interactableObjects = refManager.interactableObjects;
+			InitLevel (10);
 
-			weatherController = gameObject.GetComponent<WeatherController> ();
-			state = 10;
-			boneMenu = false;
-			pause = false;
-
-			btnPlay.onClick.AddListener (Resume);
 			btnRestart.onClick.AddListener (delegate {
 				LoadScene ("sandbox", 10);
 			});
-			btnQuit.onClick.AddListener (delegate {
-				LoadScene ("mainmenu", 1);
-			});
-
-			btnRibs.onClick.AddListener (delegate {
-				ToggleRibMenu (true);
-			});
-
-			btnUp.onClick.AddListener (delegate {
-				ToggleRibMenu (false);
-			});
-			btnDown.onClick.AddListener (delegate {
-				ToggleRibMenu (false);
-			});
-			btnLeft.onClick.AddListener (delegate {
-				ToggleRibMenu (false);
-			});
-			btnRight.onClick.AddListener (delegate {
-				ToggleRibMenu (false);
-			});
-
-			btnArms.onClick.AddListener (delegate {
-				ToggleArmMenu (true);
-			});
-			btnArmsIn.onClick.AddListener (delegate {
-				ToggleArmMenu (false);
-			});
-			btnArmsDe.onClick.AddListener (delegate {
-				ToggleArmMenu (false);
-			});
-
-			btnLegs.onClick.AddListener (delegate {
-				ToggleLegMenu (true);
-			});
-			btnLegsIn.onClick.AddListener (delegate {
-				ToggleLegMenu (false);
-			});
-			btnLegsDe.onClick.AddListener (delegate {
-				ToggleLegMenu (false);
-			});
-
-			btnSkull.onClick.AddListener (ToggleBoneMenu);
 
 			btnNext.onClick.AddListener (delegate {
 				LoadScene ("testlevel", 11);
 			});
-			btnNextMenu.onClick.AddListener (delegate {
+		} else if (gameObject.scene.name == "testlevel") {
+			InitLevel (11);
+
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("testlevel", 11);
+			});
+
+			btnNext.onClick.AddListener (delegate {
 				LoadScene ("mainmenu", 1);
 			});
-			btnNextQuit.onClick.AddListener (Quit);
-		} else if (gameObject.scene.name == "testlevel") {
-			
 		}
 	}
 	
@@ -169,35 +123,29 @@ public class GameStateController : MonoBehaviour {
 		//next level
 		case 5:
 			break;
+		//win
+		case 6:
+			break;
+		//level 1
+		case 7:
+			break;
+		//level 2
+		case 8:
+			break;
+		//level 3
+		case 9:
+			break;
 		case 10:
-			if (Input.GetKeyDown (KeyCode.Escape)) {
-				pause = !pause;
-				pausePanel.SetActive (pause);
-				TogglePauseplayerObj (pause);
-				ToggleBlockPause (pause);
-				prevState = state;
-				state = 3;
-			}
-			if (playerObj.transform.position.y <= -10) {
-				state = 2;
-				LoadScene ("gameover", 2);
-			}
-			if (Input.GetKeyDown (KeyCode.Tab)) {
-				boneMenu = !boneMenu;
-				panel.SetActive (boneMenu);
-				TogglePauseplayerObj (boneMenu);
-				ToggleBlockPause (boneMenu);
-			}
+			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 10);
 			}
-			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
-				prevState = state;
-				state = 5;
-				nextPanel.SetActive (true);
-			}
 			break;
 		case 11:
+			UpdateLevel ();
+			if (Input.GetKeyDown (KeyCode.R)) {
+				LoadScene ("testlevel", 11);
+			}
 			break;
 		}
 	}
@@ -283,6 +231,95 @@ public class GameStateController : MonoBehaviour {
 			prevState = 4;
 			legPanel.SetActive (false);
 			ToggleBoneMenu ();
+		}
+	}
+
+	//HELPER FUNCTIONS
+	void InitLevel(int s){
+		playerObj = refManager.playerObj;
+		goalObj = refManager.goalObj;
+		interactableObjects = refManager.interactableObjects;
+
+		weatherController = gameObject.GetComponent<WeatherController> ();
+		state = s;
+		boneMenu = false;
+		pause = false;
+
+		btnPlay.onClick.AddListener (Resume);
+		btnQuit.onClick.AddListener (delegate {
+			LoadScene ("mainmenu", 1);
+		});
+
+		btnRibs.onClick.AddListener (delegate {
+			ToggleRibMenu (true);
+		});
+
+		btnUp.onClick.AddListener (delegate {
+			ToggleRibMenu (false);
+		});
+		btnDown.onClick.AddListener (delegate {
+			ToggleRibMenu (false);
+		});
+		btnLeft.onClick.AddListener (delegate {
+			ToggleRibMenu (false);
+		});
+		btnRight.onClick.AddListener (delegate {
+			ToggleRibMenu (false);
+		});
+
+		btnArms.onClick.AddListener (delegate {
+			ToggleArmMenu (true);
+		});
+		btnArmsIn.onClick.AddListener (delegate {
+			ToggleArmMenu (false);
+		});
+		btnArmsDe.onClick.AddListener (delegate {
+			ToggleArmMenu (false);
+		});
+
+		btnLegs.onClick.AddListener (delegate {
+			ToggleLegMenu (true);
+		});
+		btnLegsIn.onClick.AddListener (delegate {
+			ToggleLegMenu (false);
+		});
+		btnLegsDe.onClick.AddListener (delegate {
+			ToggleLegMenu (false);
+		});
+
+		btnSkull.onClick.AddListener (ToggleBoneMenu);
+
+		btnNextMenu.onClick.AddListener (delegate {
+			LoadScene ("mainmenu", 1);
+		});
+		btnNextQuit.onClick.AddListener (Quit);
+	}
+
+	void UpdateLevel (){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			pause = !pause;
+			pausePanel.SetActive (pause);
+			TogglePauseplayerObj (pause);
+			ToggleBlockPause (pause);
+			prevState = state;
+			state = 3;
+		}
+		if (playerObj.transform.position.y <= -10) {
+			state = 2;
+			LoadScene ("gameover", 2);
+		}
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			boneMenu = !boneMenu;
+			panel.SetActive (boneMenu);
+			TogglePauseplayerObj (boneMenu);
+			ToggleBlockPause (boneMenu);
+		}
+		if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+			prevState = state;
+			state = 5;
+			nextPanel.SetActive (true);
+			TogglePauseplayerObj (true);
+			ToggleBlockPause (true);
 		}
 	}
 }
