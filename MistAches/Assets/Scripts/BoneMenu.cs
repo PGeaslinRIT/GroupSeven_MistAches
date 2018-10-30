@@ -48,6 +48,10 @@ public class BoneMenu : MonoBehaviour {
 	public int armLegCount = 2;
 
 	public Button btnRibs;
+	public Button btnRibsUp;
+	public Button btnRibsDown;
+	public Button btnRibsLeft;
+	public Button btnRibsRight;
 	public Button btnArms;
 	public Button btnLegs;
 	public Button btnSkull;
@@ -62,8 +66,17 @@ public class BoneMenu : MonoBehaviour {
 			brokenBones [i] = 0;
 		}
 
-		btnRibs.onClick.AddListener (delegate {
+		btnRibsUp.onClick.AddListener (delegate {
 			BreakBone (Bones.ribs, Direction.up);
+		});
+		btnRibsDown.onClick.AddListener (delegate {
+			BreakBone (Bones.ribs, Direction.down);
+		});
+		btnRibsLeft.onClick.AddListener (delegate {
+			BreakBone (Bones.ribs, Direction.left);
+		});
+		btnRibsRight.onClick.AddListener (delegate {
+			BreakBone (Bones.ribs, Direction.right);
 		});
 
 		btnArms.onClick.AddListener (delegate {

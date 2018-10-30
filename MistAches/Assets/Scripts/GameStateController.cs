@@ -17,6 +17,17 @@ public class GameStateController : MonoBehaviour {
 	public Button btnQuit;
 	public Button btnRestart;
 	public Button btnControls;
+
+	public GameObject ribPanel;
+	public Button btnRibs;
+	public Button btnUp;
+	public Button btnDown;
+	public Button btnLeft;
+	public Button btnRight;
+	public Button btnArms;
+	public Button btnLegs;
+	public Button btnSkull;
+
 	public int state;
 	private int prevState;
 	private bool boneMenu;
@@ -56,6 +67,28 @@ public class GameStateController : MonoBehaviour {
 				LoadScene ("mainmenu", 1);
 			});
 
+			btnRibs.onClick.AddListener (delegate {
+				ToggleRibMenu (true);
+			});
+
+			btnUp.onClick.AddListener (delegate {
+				ToggleRibMenu (false);
+			});
+			btnDown.onClick.AddListener (delegate {
+				ToggleRibMenu (false);
+			});
+			btnLeft.onClick.AddListener (delegate {
+				ToggleRibMenu (false);
+			});
+			btnRight.onClick.AddListener (delegate {
+				ToggleRibMenu (false);
+			});
+
+			btnArms.onClick.AddListener (ToggleBoneMenu);
+			btnLegs.onClick.AddListener (ToggleBoneMenu);
+			btnSkull.onClick.AddListener (ToggleBoneMenu);
+
+
 //			player.transform.position = new Vector3 (-4, -1, 0);
 //			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
 		}
@@ -77,11 +110,11 @@ public class GameStateController : MonoBehaviour {
 				pausePanel.SetActive (pause);
 				TogglePausePlayer (pause);
 				ToggleBlockPause (pause);
-				prevState = 3;
+				prevState = state;
 				state = 10;
 			}
 			break;
-		//level 1
+		//ribs menu
 		case 4:
 			break;
 		case 10:
@@ -90,7 +123,7 @@ public class GameStateController : MonoBehaviour {
 				pausePanel.SetActive (pause);
 				TogglePausePlayer (pause);
 				ToggleBlockPause (pause);
-				prevState = 10;
+				prevState = state;
 				state = 3;
 			}
 			if (player.transform.position.y <= -10) {
@@ -136,12 +169,33 @@ public class GameStateController : MonoBehaviour {
 		pause = !pause;
 		pausePanel.SetActive (pause);
 		TogglePausePlayer (pause);
+		state = prevState;
 		prevState = 3;
-		state = 10;
 	}
 
 	void ToggleControls(){
 		controls = !controls;
 		panel.SetActive (controls);
+	}
+
+	void ToggleBoneMenu(){
+		boneMenu = !boneMenu;
+		panel.SetActive (boneMenu);
+		TogglePausePlayer (boneMenu);
+		ToggleBlockPause (pause);
+	}
+
+	void ToggleRibMenu(bool on){
+		if (on) {
+			prevState = state;
+			state = 4;
+			ribPanel.SetActive (true);
+			panel.SetActive (false);
+		} else {
+			state = prevState;
+			prevState = 4;
+			ribPanel.SetActive (false);
+			ToggleBoneMenu ();
+		}
 	}
 }
