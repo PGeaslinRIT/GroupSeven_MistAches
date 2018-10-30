@@ -225,6 +225,14 @@ public class WeatherController : MonoBehaviour {
 
 	//update the wind objects
 	void UpdateWind() {
+		bool reducedGravity = false;
+
+		//reduce player gravity if wind is up
+		if (IsWindyUp ()) {
+			playerObj.GetComponent<Rigidbody2D> ().gravityScale = 1;
+			reducedGravity = true;
+		}
+
 		//reset wind force
 		totalWindForce = Vector3.zero;
 
@@ -236,6 +244,11 @@ public class WeatherController : MonoBehaviour {
 			if (windObjList [i].IsCompleted ()) {
 				Destroy (windObjList [i]);
 				windObjList.RemoveAt (i);
+
+				//fix gravity if needbe
+				if (reducedGravity && !IsWindyUp()) {
+					playerObj.GetComponent<Rigidbody2D> ().gravityScale = 3;
+				}
 			}
 
 			totalWindForce += windObjList [i].CalcForce ();
