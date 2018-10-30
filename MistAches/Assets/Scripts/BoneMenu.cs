@@ -277,7 +277,7 @@ public class BoneMenu : MonoBehaviour {
 		// LEGS first - reduce player speed by 1 (out of 7ish) for each broken leg, assuming the player is actually allowed to move
 		if (stopMoving == false)
 		{
-			playerObj.m_MaxSpeed = (initSpeed - (brokenBones[5] * 1));
+			playerObj.m_MaxSpeed = (initSpeed - (brokenBones[(int)Bones.legs] * 1));
 		}
 
 		// ARMS are currently nothign, as breaking your arms doesn't do anything
@@ -289,16 +289,15 @@ public class BoneMenu : MonoBehaviour {
 		//  - stopMoving has to be false, you need to be able to move
 		//  - then it takes 15 seconds, subtracts or adds up to 3 seconds, subtracts another second for each broken bone: every time that passes, it is true
 		// basically, every 15ish seconds you stop moving, and that number gets smaller the more ribs you break
-		if (brokenBones[3] != 0 && stopMoving == false && tick % ((450 - brokenBones[3] * 30) + Random.Range(-90, 90)) == 0)
+		if (brokenBones[(int)Bones.ribs] != 0 && stopMoving == false && tick % ((450 - brokenBones[(int)Bones.ribs] * 30) + Random.Range(-90, 90)) == 0)
 		{
 			stopMoving = true; // the player stops moving
 			// TODO: add wheezing sounds effects
-			Debug.Log("ribs broken");
 		}
 
 		// SKULL - every ~10 seconds, if your skull is broken, the camera zooms in or out a bit. The more broken your skull, the more frequently it changes
 		// the timer mather is very similar to how the ribs work
-		if (brokenBones[0] != 0 && tick % (300 - brokenBones[0] * 60) + Random.Range(-90, 90) == 0)
+		if (brokenBones[(int)Bones.skull] != 0 && tick % (300 - brokenBones[(int)Bones.skull] * 60) + Random.Range(-90, 90) == 0)
 		{
 			targetOrtho += Random.Range(-2f, 2f); // the camera zoom changes a bit, depending
 			if (targetOrtho <= 2) // camera view can't go negative
@@ -314,16 +313,16 @@ public class BoneMenu : MonoBehaviour {
 		// NECK - once broken, every ~10 seconds, the camera just tilts back and forth, like your neck is broken
 		// the more your neck is broken, the more frequeny the tilting, and the deeper the tilts
 		// the timer math is the same as the skull, which is very similar to the ribs
-		if (brokenBones[1] != 0 && tick % (300 - brokenBones[1] * 60) + Random.Range(-90, 90) == 0)
+		if (brokenBones[(int)Bones.skull] != 0 && tick % (300 - brokenBones[(int)Bones.skull] * 60) + Random.Range(-90, 90) == 0)
 		{
 			targetRot += Random.Range(-10f, 10f);
-			if (targetRot <= (-10 * brokenBones[1])) // camera can't swing more than 15 degrees per bone broken
+			if (targetRot <= (-10 * brokenBones[(int)Bones.skull])) // camera can't swing more than 15 degrees per bone broken
 			{
-				targetRot = (-10 * brokenBones[1]);
+				targetRot = (-10 * brokenBones[(int)Bones.skull]);
 			}
-			if (targetRot >= (10 * brokenBones[1])) // same goes for here, but in the opposite direction
+			if (targetRot >= (10 * brokenBones[(int)Bones.skull])) // same goes for here, but in the opposite direction
 			{
-				targetRot = (10 * brokenBones[1]);
+				targetRot = (10 * brokenBones[(int)Bones.skull]);
 			}
 		}
 	}
