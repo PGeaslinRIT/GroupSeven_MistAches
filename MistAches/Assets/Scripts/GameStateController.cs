@@ -7,14 +7,17 @@ using UnityStandardAssets._2D;
 
 public class GameStateController : MonoBehaviour {
 
+	private ReferenceManager refManager;
+
 	WeatherController weatherController;
 
-	public GameObject player;
+	private PlatformerCharacter2D playerObj;
 
 	public GameObject panel;
 	public GameObject pausePanel;
 
-	public List<GameObject> blocks;
+	private List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
+	private List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
 
 	public Button btnPlay;
 	public Button btnQuit;
@@ -48,6 +51,11 @@ public class GameStateController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		refManager = GetComponent<ReferenceManager> ();
+		playerObj = refManager.playerObj;
+		interactableObjects = refManager.interactableObjects;
+		allPlatformColliders = refManager.allPlatformColliders;
+
 		if (gameObject.scene.name == "mainmenu") {
 			state = 1;
 			controls = false;
@@ -119,8 +127,8 @@ public class GameStateController : MonoBehaviour {
 			btnSkull.onClick.AddListener (ToggleBoneMenu);
 
 
-//			player.transform.position = new Vector3 (-4, -1, 0);
-//			player.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
+//			playerObj.transform.position = new Vector3 (-4, -1, 0);
+//			playerObj.transform.localScale = new Vector3 (1.771533f, 1.77153f, 1);
 		}
 	}
 	
@@ -138,7 +146,7 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.Escape)) {
 				pause = !pause;
 				pausePanel.SetActive (pause);
-				TogglePausePlayer (pause);
+				TogglePauseplayerObj (pause);
 				ToggleBlockPause (pause);
 				prevState = state;
 				state = 10;
@@ -151,19 +159,19 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.Escape)) {
 				pause = !pause;
 				pausePanel.SetActive (pause);
-				TogglePausePlayer (pause);
+				TogglePauseplayerObj (pause);
 				ToggleBlockPause (pause);
 				prevState = state;
 				state = 3;
 			}
-			if (player.transform.position.y <= -10) {
+			if (playerObj.transform.position.y <= -10) {
 				state = 2;
 				LoadScene ("gameover", 2);
 			}
 			if (Input.GetKeyDown (KeyCode.Tab)) {
 				boneMenu = !boneMenu;
 				panel.SetActive (boneMenu);
-				TogglePausePlayer (boneMenu);
+				TogglePauseplayerObj (boneMenu);
 				ToggleBlockPause (boneMenu);
 			}
 			if (Input.GetKeyDown (KeyCode.R)) {
@@ -182,23 +190,29 @@ public class GameStateController : MonoBehaviour {
 		state = s;
 	}
 
-	void TogglePausePlayer(bool paused){
-		player.GetComponent<Platformer2DUserControl> ().enabled = !paused;
-		player.GetComponent<Animator> ().enabled = !paused;
-		player.GetComponent<Rigidbody2D> ().simulated = !paused;
+	void TogglePauseplayerObj(bool paused){
+		playerObj.GetComponent<Platformer2DUserControl> ().enabled = !paused;
+		playerObj.GetComponent<Animator> ().enabled = !paused;
+		playerObj.GetComponent<Rigidbody2D> ().simulated = !paused;
 		weatherController.enabled = !paused;
 	}
 
 	void ToggleBlockPause(bool paused){
-		for (int i = 0; i < blocks.Count; i++) {
-			blocks [i].GetComponent<Rigidbody2D> ().simulated = !paused;
+		for (int i = 0; i < interactableObjects.Count; i++) {
+			interactableObjects [i].GetComponent<Rigidbody2D> ().simulated = !paused;
+		}
+		for (int i = 0; i < allPlatformColliders.Count; i++) {
+			Rigidbody2D thisRigidBody = allPlatformColliders [i].GetComponent<Rigidbody2D> ();
+			if (thisRigidBody != null) {
+				thisRigidBody.simulated = !paused;
+			}
 		}
 	}
 
 	void Resume(){
 		pause = !pause;
 		pausePanel.SetActive (pause);
-		TogglePausePlayer (pause);
+		TogglePauseplayerObj (pause);
 		state = prevState;
 		prevState = 3;
 	}
@@ -211,7 +225,7 @@ public class GameStateController : MonoBehaviour {
 	void ToggleBoneMenu(){
 		boneMenu = !boneMenu;
 		panel.SetActive (boneMenu);
-		TogglePausePlayer (boneMenu);
+		TogglePauseplayerObj (boneMenu);
 		ToggleBlockPause (pause);
 	}
 
