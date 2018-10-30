@@ -2,15 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-<<<<<<< HEAD
 using UnityStandardAssets._2D;
-<<<<<<< HEAD
-=======
->>>>>>> parent of b9276b9... A - Added bone menu buttons
-=======
->>>>>>> parent of 712f60c... S - added broken bone effects
-=======
->>>>>>> parent of 09fbd8c... Revert "A - Added bone menu buttons"
 
 enum Bones{
 	skull,
@@ -61,27 +53,17 @@ public class BoneMenu : MonoBehaviour {
 		btnSkull.onClick.AddListener (delegate {
 			BreakBone (Bones.skull);
 		});
-<<<<<<< HEAD
 
-        // stuff for manipulating the player
-        initSpeed = pC2D.m_MaxSpeed;
-        tick = 0;
-        stopMoving = false;
-
-        // setting default camera values
-        targetOrtho = myCam.orthographicSize;
-        smoothSpeed = 2;
-        targetRot = 0;
+//        // stuff for manipulating the player
+//        initSpeed = pC2D.m_MaxSpeed;
+//        tick = 0;
+//        stopMoving = false;
+//
+//        // setting default camera values
+//        targetOrtho = myCam.orthographicSize;
+//        smoothSpeed = 2;
+//        targetRot = 0;
     }
-<<<<<<< HEAD
-=======
-	}
->>>>>>> parent of b9276b9... A - Added bone menu buttons
-=======
-	}
->>>>>>> parent of 712f60c... S - added broken bone effects
-=======
->>>>>>> parent of 09fbd8c... Revert "A - Added bone menu buttons"
 	
 	// Update is called once per frame
 	void Update () {
