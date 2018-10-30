@@ -10,6 +10,7 @@ public class ReferenceManager : MonoBehaviour {
 
 	public List<GameObject> interactableObjects = new List<GameObject> (); //set manually for now
 	public List<GameObject> allPlatformColliders = new List<GameObject> (); //set manually for now
+	public List<GameObject> plantObjList = new List<GameObject> (); //set manually for now
 
 	public GameObject hotTintObj;
 	public GameObject coldTintObj;
