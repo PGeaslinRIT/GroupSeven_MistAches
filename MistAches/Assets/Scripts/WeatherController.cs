@@ -41,6 +41,7 @@ public class WeatherController : MonoBehaviour {
 	public int windMaxDuration = 250;
 	public List<WindObj> windObjList = new List<WindObj> ();
 	public Vector3 totalWindForce = Vector3.zero;
+	public float windRange = 5.0f;
 
 	//lightning variables
 	public int lightningDuration = 0;
@@ -84,6 +85,16 @@ public class WeatherController : MonoBehaviour {
 
 		//make snow and rain appear
 		UpdatePrecipitation ();
+	}
+
+	//detemine whether two objects are within a range of each other
+	bool WithinRange (float range, BoxCollider2D collider1, BoxCollider2D collider2) {
+		Vector3 c1Pos = collider1.transform.position;
+		Vector3 c2Pos = collider2.transform.position;
+
+		float distanceSqr = (c1Pos - c2Pos).sqrMagnitude;
+
+		return (distanceSqr < range * range);
 	}
 
 	/////////////////////////////////////
@@ -217,8 +228,12 @@ public class WeatherController : MonoBehaviour {
 		//apply wind to all of the objects that it can affect
 		playerObj.transform.position += windMod * totalWindForce;
 
+		//apply wind totalWindForce necessary interactableObjects objects
 		for (int i = 0; i < interactableObjects.Count; i++) {
-			interactableObjects [i].transform.position += windMod * totalWindForce;
+			//only apply wind to objects within designated range
+			if (WithinRange(windRange, playerObj.GetComponent<BoxCollider2D>(), interactableObjects[i].GetComponent<BoxCollider2D>())) {
+				interactableObjects [i].transform.position += windMod * totalWindForce;
+			}
 		}
 	}
 
