@@ -21,20 +21,18 @@ public class KeyLock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < keys.Count; i++) {
-			if (player.GetComponent<BoxCollider2D> ().IsTouching (keys [i].GetComponent<BoxCollider2D> ())) {
+			if (player.GetComponent<BoxCollider2D> ().IsTouching (keys [i].GetComponent<BoxCollider2D> ()) && player.GetComponent<KeyOnPlayer>().hasKey == false) {
 				Destroy (keys [i]);
 				keys.RemoveAt (i);
+				player.GetComponent<KeyOnPlayer> ().hasKey = true;
 			}
 		}
 
-		for (int i = 0; i < keys.Count; i++) {
-			for (int j = 0; j < locks.Count; j++) {
-				if (keys [i].GetComponent<BoxCollider2D> ().IsTouching (locks [i].GetComponent<BoxCollider2D> ())) {
-					Destroy (keys [i]);
-					keys.RemoveAt (i);
-					Destroy (locks [j]);
-					locks.RemoveAt (j);
-				}
+		for (int i = 0; i < locks.Count; i++) {
+			if (player.GetComponent<BoxCollider2D> ().IsTouching (locks [i].GetComponent<BoxCollider2D> ()) && player.GetComponent<KeyOnPlayer> ().hasKey == true) {
+				Destroy (locks [j]);
+				locks.RemoveAt (j);
+				player.GetComponent<KeyOnPlayer> ().hasKey = false;
 			}
 		}
 	}
