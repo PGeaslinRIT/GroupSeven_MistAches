@@ -9,6 +9,11 @@ public class WindObj : MonoBehaviour {
 	private Vector3 myForce = Vector3.zero;
 	private bool completed = false;
 
+	//getters and setters
+	public void SetMaxDuration (int newMax) { myMaxDuration = newMax; } 
+	public bool IsCompleted () { return completed; }
+	public Direction GetDir () { return myDir; }
+
 	// Use this for initialization
 	void Start () {
 		
@@ -65,9 +70,4 @@ public class WindObj : MonoBehaviour {
 
 		return myForce;
 	}
-
-	//getters and setters
-	public void SetMaxDuration (int newMax) { myMaxDuration = newMax; } 
-	public bool IsCompleted () { return completed; }
-	public Direction GetDir () { return myDir; }
 }

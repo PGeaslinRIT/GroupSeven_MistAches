@@ -54,6 +54,15 @@ public class WeatherController : MonoBehaviour {
 	public bool IsHot () { return (temperature == 1); }
 	public bool IsCold () { return (temperature == -1); }
 	public bool IsWindy () { return (windObjList.Count > 0); }
+	public bool IsWindyUp () {
+		foreach (WindObj wind in windObjList) {
+			if (wind.GetDir () == Direction.up) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 	// Use this for initialization
 	void Start () {
