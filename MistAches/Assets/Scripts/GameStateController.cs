@@ -62,7 +62,7 @@ public class GameStateController : MonoBehaviour {
 			state = 1;
 			controls = false;
 			btnPlay.onClick.AddListener (delegate {
-				LoadScene ("sandbox", 10);
+				LoadScene ("level1", 7);
 			});
 			btnControls.onClick.AddListener (ToggleControls);
 			btnRestart.onClick.AddListener (ToggleControls);
@@ -73,21 +73,60 @@ public class GameStateController : MonoBehaviour {
 				LoadScene ("mainmenu", 1);
 			});
 			btnQuit.onClick.AddListener (Quit);
-		} else if (gameObject.scene.name == "sandbox") {
-			InitLevel (10);
+		} else if (gameObject.scene.name == "win") {
+			state = 6;
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("mainmenu", 1);
+			});
+			btnQuit.onClick.AddListener (Quit);
+		} else if (gameObject.scene.name == "level1") {
+			InitLevel (7);
 
 			btnRestart.onClick.AddListener (delegate {
-				LoadScene ("sandbox", 10);
+				LoadScene ("level1", 7);
 			});
 
 			btnNext.onClick.AddListener (delegate {
-				LoadScene ("testlevel", 11);
+				LoadScene ("level2", 8);
 			});
-		} else if (gameObject.scene.name == "testlevel") {
-			InitLevel (11);
+		} else if (gameObject.scene.name == "level2") {
+			InitLevel (8);
 
 			btnRestart.onClick.AddListener (delegate {
-				LoadScene ("testlevel", 11);
+				LoadScene ("level2", 8);
+			});
+
+			btnNext.onClick.AddListener (delegate {
+				LoadScene ("level3", 9);
+			});
+		} else if (gameObject.scene.name == "level3") {
+			InitLevel (9);
+
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("level3", 9);
+			});
+
+			btnNext.onClick.AddListener (delegate {
+				LoadScene ("win", 6);
+			});
+		} 
+
+		// sandbox and test level
+		else if (gameObject.scene.name == "sandbox") {
+			InitLevel (20);
+
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("sandbox", 20);
+			});
+
+			btnNext.onClick.AddListener (delegate {
+				LoadScene ("testlevel", 21);
+			});
+		} else if (gameObject.scene.name == "testlevel") {
+			InitLevel (21);
+
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("testlevel", 21);
 			});
 
 			btnNext.onClick.AddListener (delegate {
@@ -113,8 +152,8 @@ public class GameStateController : MonoBehaviour {
 				pausePanel.SetActive (pause);
 				TogglePauseplayerObj (pause);
 				ToggleBlockPause (pause);
-				prevState = state;
-				state = 10;
+				state = prevState;
+				prevState = 3;
 			}
 			break;
 		//bone menus
@@ -128,23 +167,37 @@ public class GameStateController : MonoBehaviour {
 			break;
 		//level 1
 		case 7:
+			UpdateLevel ();
+			if (Input.GetKeyDown (KeyCode.R)) {
+				LoadScene ("level1", 7);
+			}
 			break;
 		//level 2
 		case 8:
+			UpdateLevel ();
+			if (Input.GetKeyDown (KeyCode.R)) {
+				LoadScene ("level2", 8);
+			}
 			break;
 		//level 3
 		case 9:
-			break;
-		case 10:
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
-				LoadScene ("sandbox", 10);
+				LoadScene ("level3", 9);
 			}
 			break;
-		case 11:
+		
+		//sandbox and test level
+		case 20:
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
-				LoadScene ("testlevel", 11);
+				LoadScene ("sandbox", 20);
+			}
+			break;
+		case 21:
+			UpdateLevel ();
+			if (Input.GetKeyDown (KeyCode.R)) {
+				LoadScene ("testlevel", 21);
 			}
 			break;
 		}
