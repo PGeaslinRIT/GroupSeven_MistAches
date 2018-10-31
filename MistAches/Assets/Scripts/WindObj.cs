@@ -55,7 +55,7 @@ public class WindObj : MonoBehaviour {
 			myForce.y = -.5f;
 			break;
 		case Direction.left:
-			myForce.x = .5f;
+			myForce.x = -.5f;
 			break;
 		case Direction.right:
 			myForce.x = .5f;
