@@ -257,6 +257,7 @@ public class WeatherController : MonoBehaviour {
 		//apply wind to all of the objects that it can affect
 		playerObj.transform.position += windMod * totalWindForce;
 
+
 		//apply wind totalWindForce necessary interactableObjects objects
 		for (int i = 0; i < interactableObjects.Count; i++) {
 			//only apply wind to objects within designated range
