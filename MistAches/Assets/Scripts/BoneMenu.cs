@@ -210,12 +210,7 @@ public class BoneMenu : MonoBehaviour {
 		if (!EnoughBones (bone)) {
 			return;
 		}
-
-		// play the bone-crunching noise, assuming it hasn't just been played
-		if (cronchToggle == true) {
-			boneCronch.Play (); // play the sound...
-		}
-
+			
 		bool validBreak = false;
 
 		//change weather accordingly and check for break validity
@@ -240,7 +235,7 @@ public class BoneMenu : MonoBehaviour {
 		case Bones.skull:
 			validBreak = myWeatherController.CreateLightning ();
 			// play the thunder noise, cycling the toggle so it doesn't play on repeat
-			if (thunderToggle == true) {
+			if (thunderToggle == true && validBreak) {
 				thunder.Play (); // play the sound...
 				//thunderToggle = false; // ...then make sure you don't immediately play it again
 			}
@@ -253,6 +248,11 @@ public class BoneMenu : MonoBehaviour {
 		case Bones.neck:
 			validBreak = true;
 			break;
+		}
+
+		// play the bone-crunching noise, assuming it hasn't just been played
+		if (cronchToggle == true && validBreak) {
+			boneCronch.Play (); // play the sound...
 		}
 
 		//only break the bone if the break was valid
@@ -380,13 +380,13 @@ public class BoneMenu : MonoBehaviour {
 			// when your ribs make you stop, cough
 			if (coughToggle == true) {
 				cough.Play ();
-				coughToggle = false;
+				//coughToggle = false;
 			} 
 			// make sure it only plays once
-			if (coughToggle == false) {
+			/*if (coughToggle == false) {
 				cough.Stop ();
 				coughToggle = true;
-			}
+			}*/
 
 			stopMoving = true; // the player stops moving
 

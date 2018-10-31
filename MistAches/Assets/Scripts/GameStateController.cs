@@ -181,6 +181,13 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("level1", 7);
 			}
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
+				TogglePauseplayerObj (true);
+				ToggleBlockPause (true);
+			}
 			break;
 		//level 2
 		case 8:
@@ -188,12 +195,25 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("level2", 8);
 			}
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
+				TogglePauseplayerObj (true);
+				ToggleBlockPause (true);
+			}
 			break;
 		//level 3
 		case 9:
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("level3", 9);
+			}if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
+				TogglePauseplayerObj (true);
+				ToggleBlockPause (true);
 			}
 			break;
 		//level 4
@@ -201,6 +221,10 @@ public class GameStateController : MonoBehaviour {
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("level4", 10);
+			}
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				LoadScene ("win", 6);
 			}
 			break;
 		
@@ -210,11 +234,25 @@ public class GameStateController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("sandbox", 20);
 			}
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
+				TogglePauseplayerObj (true);
+				ToggleBlockPause (true);
+			}
 			break;
 		case 21:
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("testlevel", 21);
+			}
+			if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
+				prevState = state;
+				state = 5;
+				nextPanel.SetActive (true);
+				TogglePauseplayerObj (true);
+				ToggleBlockPause (true);
 			}
 			break;
 		}
@@ -383,13 +421,6 @@ public class GameStateController : MonoBehaviour {
 			panel.SetActive (boneMenu);
 			TogglePauseplayerObj (boneMenu);
 			ToggleBlockPause (boneMenu);
-		}
-		if (playerObj.GetComponent<Rigidbody2D> ().IsTouching(goalObj.GetComponent<BoxCollider2D> ())) {
-			prevState = state;
-			state = 5;
-			nextPanel.SetActive (true);
-			TogglePauseplayerObj (true);
-			ToggleBlockPause (true);
 		}
 	}
 }
