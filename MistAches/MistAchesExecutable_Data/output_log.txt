@@ -1,0 +1,2198 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.7654
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.295 seconds
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\allie\OneDrive\Documents\GitHub\GroupSeven_MistAches\MistAches\MistAchesExecutable_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.884170 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at GameStateController.UpdateLevel () [0x00000] in <filename unknown>:0 
+  at GameStateController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.374852 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1197.
+Total: 0.637531 ms (FindLiveObjects: 0.058029 ms CreateObjectMapping: 0.033554 ms MarkObjects: 0.535289 ms  DeleteObjects: 0.010263 ms)
+
+ping wind
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[WindObj].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.781222 ms
+
+Unloading 139 unused Assets to reduce memory usage. Loaded Objects now: 316.
+Total: 4.013484 ms (FindLiveObjects: 0.035133 ms CreateObjectMapping: 0.021316 ms MarkObjects: 0.210799 ms  DeleteObjects: 3.745050 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.412914 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 359.
+Total: 0.309093 ms (FindLiveObjects: 0.028422 ms CreateObjectMapping: 0.021316 ms MarkObjects: 0.252643 ms  DeleteObjects: 0.005526 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at GameStateController.UpdateLevel () [0x00000] in <filename unknown>:0 
+  at GameStateController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.361201 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1197.
+Total: 0.537262 ms (FindLiveObjects: 0.050528 ms CreateObjectMapping: 0.034343 ms MarkObjects: 0.446469 ms  DeleteObjects: 0.005526 ms)
+
+ping wind
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[WindObj].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ping wind
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+touch key
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[WindObj].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[BoxCollider2D] () [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[Rigidbody2D] () [0x00000] in <filename unknown>:0 
+  at GameStateController.ToggleBlockPause (Boolean paused) [0x00000] in <filename unknown>:0 
+  at GameStateController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.129397 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1224.
+Total: 0.586607 ms (FindLiveObjects: 0.060002 ms CreateObjectMapping: 0.032764 ms MarkObjects: 0.479233 ms  DeleteObjects: 0.014211 ms)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.158609 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1309.
+Total: 0.658453 ms (FindLiveObjects: 0.078161 ms CreateObjectMapping: 0.033159 ms MarkObjects: 0.540421 ms  DeleteObjects: 0.006316 ms)
+
+ping wind
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+touch key
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[WindObj].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.899254 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1309.
+Total: 0.668716 ms (FindLiveObjects: 0.084083 ms CreateObjectMapping: 0.034738 ms MarkObjects: 0.542789 ms  DeleteObjects: 0.006316 ms)
+
+ping wind
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+touch key
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[WindObj].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at WeatherController.UpdateWind () [0x00000] in <filename unknown>:0 
+  at WeatherController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'Pill') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.872410 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1500.
+Total: 0.576738 ms (FindLiveObjects: 0.106978 ms CreateObjectMapping: 0.026053 ms MarkObjects: 0.436994 ms  DeleteObjects: 0.005526 ms)
+
+touch key
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.935177 ms
+
+Unloading 145 unused Assets to reduce memory usage. Loaded Objects now: 316.
+Total: 3.698469 ms (FindLiveObjects: 0.040659 ms CreateObjectMapping: 0.015790 ms MarkObjects: 0.182772 ms  DeleteObjects: 3.458852 ms)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 4a0c -> priority: 1 
+  Thread -> id: 56cc -> priority: 1 
+  Thread -> id: 5b64 -> priority: 1 
+  Thread -> id: 34ac -> priority: 1 

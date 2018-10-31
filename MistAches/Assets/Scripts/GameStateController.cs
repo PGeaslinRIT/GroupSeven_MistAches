@@ -44,6 +44,10 @@ public class GameStateController : MonoBehaviour {
 
 	public Button btnSkull;
 
+	public Button btnBack1;
+	public Button btnBack2;
+	public Button btnBack3;
+
 	public Button btnNext;
 	public Button btnNextMenu;
 	public Button btnNextQuit;
@@ -342,6 +346,21 @@ public class GameStateController : MonoBehaviour {
 		}
 	}
 
+	void ToggleRibMenuBack(){
+		ToggleRibMenu (false);
+		ToggleBoneMenu ();
+	}
+
+	void ToggleArmMenuBack(){
+		ToggleArmMenu (false);
+		ToggleBoneMenu ();
+	}
+
+	void ToggleLegMenuBack(){
+		ToggleLegMenu (false);
+		ToggleBoneMenu ();
+	}
+
 	//HELPER FUNCTIONS
 	void InitLevel(int s){
 		playerObj = refManager.playerObj;
@@ -396,6 +415,10 @@ public class GameStateController : MonoBehaviour {
 		});
 
 		btnSkull.onClick.AddListener (ToggleBoneMenu);
+
+		btnBack1.onClick.AddListener (ToggleRibMenuBack);
+		btnBack2.onClick.AddListener (ToggleArmMenuBack);
+		btnBack3.onClick.AddListener (ToggleLegMenuBack);
 
 		btnNextMenu.onClick.AddListener (delegate {
 			LoadScene ("mainmenu", 1);
