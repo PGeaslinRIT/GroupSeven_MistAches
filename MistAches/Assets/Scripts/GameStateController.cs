@@ -107,6 +107,16 @@ public class GameStateController : MonoBehaviour {
 			});
 
 			btnNext.onClick.AddListener (delegate {
+				LoadScene ("level4", 10);
+			});
+		} else if (gameObject.scene.name == "level4") {
+			InitLevel (10);
+
+			btnRestart.onClick.AddListener (delegate {
+				LoadScene ("level4", 10);
+			});
+
+			btnNext.onClick.AddListener (delegate {
 				LoadScene ("win", 6);
 			});
 		} 
@@ -184,6 +194,13 @@ public class GameStateController : MonoBehaviour {
 			UpdateLevel ();
 			if (Input.GetKeyDown (KeyCode.R)) {
 				LoadScene ("level3", 9);
+			}
+			break;
+		//level 4
+		case 10:
+			UpdateLevel ();
+			if (Input.GetKeyDown (KeyCode.R)) {
+				LoadScene ("level4", 10);
 			}
 			break;
 		
