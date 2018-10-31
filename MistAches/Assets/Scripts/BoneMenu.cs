@@ -214,12 +214,6 @@ public class BoneMenu : MonoBehaviour {
 		// play the bone-crunching noise, assuming it hasn't just been played
 		if (cronchToggle == true) {
 			boneCronch.Play (); // play the sound...
-			cronchToggle = false; // ...then make sure you don't immediately play it again
-		}
-
-		if (cronchToggle == false) {
-			boneCronch.Stop (); // stop the sound...
-			cronchToggle = true; // and enable it to play again
 		}
 
 		bool validBreak = false;
@@ -231,14 +225,14 @@ public class BoneMenu : MonoBehaviour {
 			// play the wind noise, cycling the toggle so it doesn't endlessly repeat
 			if (windToggle == true) {
 				wind.Play (); // play the sound...
-				windToggle = false; // ...then make sure you don't immediately play it again
+				//windToggle = false; // ...then make sure you don't immediately play it again
 				Debug.Log("ping wind");
 				if (wind.clip == null) {
 					Debug.Log ("wind null af");
 				}
 			}
 
-			/*if (windToggle == false) {
+			/*else if (windToggle == false) {
 				wind.Stop (); // stop the sound...
 				windToggle = true; // and enable it to play again
 			}*/
@@ -248,13 +242,13 @@ public class BoneMenu : MonoBehaviour {
 			// play the thunder noise, cycling the toggle so it doesn't play on repeat
 			if (thunderToggle == true) {
 				thunder.Play (); // play the sound...
-				thunderToggle = false; // ...then make sure you don't immediately play it again
+				//thunderToggle = false; // ...then make sure you don't immediately play it again
 			}
 
-			if (thunderToggle == false) {
+			/*if (thunderToggle == false) {
 				thunder.Stop (); // stop the sound...
 				thunderToggle = true; // and enable it to play again
-			}
+			}*/
 			break;
 		case Bones.neck:
 			validBreak = true;
@@ -278,25 +272,16 @@ public class BoneMenu : MonoBehaviour {
 	//break bones that increase/decrease
 	void BreakBone(Bones bone, bool increase){
 
-		// trigger rain audio if there is actually rain...
-		if(myWeatherController.precipitation > 0){
-			rain.Play (); // 
-		}
-		// ...and kill it if there isn't
-		if (myWeatherController.precipitation <= 0) {
-			rain.Stop ();
-		}
-
 		// play the bone-crunching noise, assuming it hasn't just been played
 		if (cronchToggle == true) {
 			boneCronch.Play (); // play the sound...
-			cronchToggle = false; // ...then make sure you don't immediately play it again
+			//cronchToggle = false; // ...then make sure you don't immediately play it again
 		}
 
-		if (cronchToggle == false) {
+		/*if (cronchToggle == false) {
 			boneCronch.Stop (); // stop the sound...
 			cronchToggle = true; // and enable it to play again
-		}
+		}*/
 
 		if (!EnoughBones (bone)) {
 			return;
@@ -327,6 +312,15 @@ public class BoneMenu : MonoBehaviour {
 			broken += brokenBones [i];
 		}
 		currentBroken.text = "Bones Broken:\t\t" + broken;
+
+		// trigger rain audio if there is actually rain...
+		if(myWeatherController.precipitation > 0){
+			rain.Play (); // 
+		}
+		// ...and kill it if there isn't
+		if (myWeatherController.precipitation <= 0) {
+			rain.Stop ();
+		}
 	}
 
 	//check that there are enough bones to still break
