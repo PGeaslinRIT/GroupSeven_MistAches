@@ -49,16 +49,16 @@ public class WindObj : MonoBehaviour {
 	public Vector3 CalcForce () {
 		switch (myDir) {
 		case Direction.up:
-			myForce.y = 1.0f;
+			myForce.y = .5f;
 			break;
 		case Direction.down:
-			myForce.y = -1.0f;
+			myForce.y = -.5f;
 			break;
 		case Direction.left:
-			myForce.x = -1.0f;
+			myForce.x = .5f;
 			break;
 		case Direction.right:
-			myForce.x = 1.0f;
+			myForce.x = .5f;
 			break;
 		default:
 		case Direction.none:
